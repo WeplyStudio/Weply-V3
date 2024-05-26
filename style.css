@@ -1,0 +1,25 @@
+body {
+        font-family: quicksand;
+        background-color: #00008B;
+        align-items: center;
+    }
+.navbar-1 {
+        border-radius: 30px;
+        border: 0px solid white;
+        width: 80%;
+        height: 50px;        
+        background-color: rgba(0, 0, 255, 0.5);
+        margin-top: 40px;
+        position: fixed;
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(10px);
+        color: white;
+        display: inline-block
+    }
+    .container-2 {
+    display: flex;
+    justify-content: center; /* Memposisikan card di tengah secara horizontal */
+    align-items: center; /* Memposisikan card di tengah secara vertikal */
+    height: 100%;
+    margin-top: 40px;
+}    
