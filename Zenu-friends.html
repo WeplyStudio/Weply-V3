@@ -94,7 +94,7 @@
             padding: 10px;
             border: none;
             border-radius: 3px;
-            outline: none;                        
+            outline: none;
         }
 
         #send-button {
@@ -130,11 +130,11 @@
         <div id="header">
             <div id="user-profile">
                 <img src="https://i.ibb.co.com/DQwQtG4/Tambahkan-subjudul-20240607-124230-0000.png" alt="User Avatar">
-                <h2>Zenu AI</h2>
+                <h2>Zenu AI Friend</h2>
             </div>
         </div>
         <center>
-        <div id="header" style="width:80%;margin:10px;bordpx-radius:5px;padding:10px"">Zenu AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
+        <div id="header" style="width:80%;margin:10px;bordpx-radius:5px;padding:10px">Zenu AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
         </center>
         <div id="chat-log">
         </div>
@@ -150,7 +150,7 @@
                 t = document.getElementById("user-input"),
                 n = document.getElementById("send-button"),
                 a = document.getElementById("delete-button"),
-                o = 100,
+                o = 99999999999999999999,
                 s = "chatbotMessageLimit",
                 mKey = "chatbotMessages";
 
@@ -257,11 +257,11 @@
                             result = num1 / num2;
                             break;
                         default:
-                            result = "Operasi tidak dikenal";
+                            result = "Operator tidak dikenal";
                     }
-                    return `Hasil dari ${e} adalah ${result}`;
+                    return `Hasil dari ${num1} ${operator} ${num2} adalah ${result}`;
                 }
-
+                
                 if (t.includes("ada") || t.includes("ad") || t.includes("ada dong") || t.includes("ad dong") || t.includes("ada duong") || t.includes("yah ada dong")) return "Emang lu butuh bantuan apaan? sini kasih tau gw, tapi ntar aja pas gw udah di upgrade, soalnya gw nih masih belum pinter, masih harus banyak belajar awoakwowk :)";
                 if (t.includes("tutorial") || t.includes("Tutorial")) return "𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹\n\n1. Kalau lu mau ngitung cukup ketik angka sama simbol nya aja, contoh 6 + 9 atau 9 x 6 atau 7 - 6 atau 5 : 5\n\n2. Kalau mau cek limit tinggal ketik .limit aja.\n\nNah fitur nya baru itu aja ntar bakalan diupdate lagi kok versi bot nya terus ditambahin fitur nya ama owner"
                 if (t.includes("berapa limit saya") || t.includes("berapa limit gw") || t.includes("woy berapa limit gw") || t.includes("sisa limit") || t.includes(".limit")) return `Sisa limit pesan harian kamu adalah ${o - l.count} pesan.`;
@@ -283,24 +283,22 @@
             }
 
             function p(e) {
-                const t = ["anjing", "babi", "bangsat", "kontol", "ngentod", "memek", "asu", "chawnimale", "chibay", "cibay", "entod", "sange", "asw", "bangke", "anjay", "anj", "anjrit", "anjir", "bodoh", "goblok", "gblk", "tolol", "pepek", "toket", "tobrut", "kemem", "gblk", "ngtd", "jnck", "bngke", "mmk", "mmek", "memk", "kontl", "kntol", "kntl", "kintil", "bgst", "ppk", "anjr", "cnm", "cby", "ewe", "ew", "bacot", "bodoh", "bego", "pukimak", "kimak", "anying"], n = e.toLowerCase();
+                const t = ["anjing", "babi", "bangsat", "kontol", "ngentod", "memek", "asu", "chawnimale", "chibay", "cibay", "entod", "sange", "asw", "bangke", "anjay", "anj", "anjrit", "anjir", "bodoh", "goblok", "gblk", "tolol", "pepek", "toket", "tobrut", "kemem", "gblk", "ngtd", "jnck", "bngke", "mmk", "mmek", "memk", "kontl", "kntol", "kntl", "kintil", "bgst", "ppk", "anjr", "cnm", "cby", "ewe", "ew", "bacot", "bodoh", "bego", "pukimak", "kimak", " anying", "pussy", "dick", "vagina", "penis", "tetek", "payudara", "sperma", "cum"], n = e.toLowerCase();
                 for (const e of t) if (n.includes(e)) return !0;
                 return !1
             }
         });
+
+            // Cek apakah pengguna sudah pernah memasukkan password yang benar
+            if (!localStorage.getItem("authenticated")) {
+                const password = prompt("Masukkan password:");
+                if (password !== "friend123") {
+                    alert("Password salah!");
+                    window.location.href = "about:blank";
+                } else {
+                    localStorage.setItem("authenticated", true);
+                }
+            };
     </script>
 </body>
 </html>
-
-<script>
-    const password = "friend123";
-
-const enteredPassword = prompt("Masukkan password untuk mengakses website:");
-
-if (enteredPassword !== password) {
-  alert("Password salah. Akses ditolak.");
-  window.location.href = "about:blank";
-} else {
-  alert("Password benar. Akses diizinkan.");
-}
-</script>
