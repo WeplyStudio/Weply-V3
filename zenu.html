@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Barcode+128&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Jost;
             margin: 0;
             padding: 0;
             background-color: #f2f2f2;
+        }
+        
+        .barcode {
+            font-family: "Libre Barcode 128", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            padding: 0px;
+            margin: 8px;
+            
         }
 
         #chat-container {
@@ -87,14 +99,16 @@
             padding: 10px;
             border-top: 1px solid #ccc;
             height: 80px;
+            font-family: Jost;
         }
 
         input[type="text"] {
             flex-grow: 1;
-            padding: 10px;
+            padding: 5px;
             border: none;
             border-radius: 3px;
-            outline: none;                        
+            outline: none;
+            font-family: Jost;
         }
 
         #send-button {
@@ -105,6 +119,7 @@
             color: #fff;
             cursor: pointer;
             margin-left: 10px;
+            font-family: Jost;
         }
 
         #send-button:hover {
@@ -118,6 +133,7 @@
             border-radius: 3px;
             color: #fff;
             cursor: pointer;
+            font-family: Jost;
         }
 
         #delete-button:hover {
@@ -139,7 +155,7 @@
         <div id="chat-log">
         </div>
         <div id="input-container">
-            <input type="text" id="user-input" placeholder="Ketik pesan..." value="hai">
+            <input type="text" id="user-input" placeholder="Ketik pesan..." value="Hai">
             <button id="send-button">Kirim</button>&ensp;
             <button id="delete-button">Hapus</button>
         </div>
@@ -214,6 +230,30 @@
                 e.appendChild(a);
                 e.scrollTop = e.scrollHeight;
             }
+            
+            function m() {
+    const e = t.value.trim();
+    if ("" === e) return;
+    if (e.toLowerCase() === "beoa") {
+        const imageUrl = "https://i.ibb.co.com/DQwQtG4/Tambahkan-subjudul-20240607-124230-0000.png"; // Ganti dengan URL gambar yang ingin Anda kirimkan
+        const time = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        const imageCard = document.createElement("div");
+        imageCard.classList.add("chat-card");
+        imageCard.classList.add("bot-message"); // Menggunakan bot-message agar tampil di sisi kanan
+        imageCard.innerHTML = `<img src="${imageUrl}" alt="Pesan Gambar">`;
+        const timestamp = document.createElement("div");
+        timestamp.classList.add("timestamp");
+        timestamp.textContent = time;
+        imageCard.appendChild(timestamp);
+        e.appendChild(imageCard);
+        e.scrollTop = e.scrollHeight;
+        saveMessage(`<img src="${imageUrl}" alt="Pesan Gambar">`, !1, time);
+        t.value = "";
+        return;
+    }
+    // Kode selanjutnya untuk memproses pesan lain
+}
+
 
             function m() {
                 const e = t.value.trim();
@@ -231,7 +271,7 @@
                     saveMessage(t, !1, new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }));
                 }, 1e3), t.value = ""
             }
-
+            
             function f(e) {
                 const t = e.toLowerCase();
                 
@@ -266,6 +306,24 @@
                 if (t.includes("tutorial") || t.includes("Tutorial")) return "𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹\n\n1. Kalau lu mau ngitung cukup ketik angka sama simbol nya aja, contoh 6 + 9 atau 9 x 6 atau 7 - 6 atau 5 : 5\n\n2. Kalau mau cek limit tinggal ketik .limit aja.\n\nNah fitur nya baru itu aja ntar bakalan diupdate lagi kok versi bot nya terus ditambahin fitur nya ama owner"
                 if (t.includes("berapa limit saya") || t.includes("berapa limit gw") || t.includes("woy berapa limit gw") || t.includes("sisa limit") || t.includes(".limit")) return `Sisa limit pesan harian kamu adalah ${o - l.count} pesan.`;
                 if (t.includes("lah") || t.includes("lah napa nih") || t.includes("lah ini napa") || t.includes("lah napa lu?") || t.includes("lah lu napa?")) return "Gak semua perintah lu bisa gw jawab kocak, gw juga masih belum sempurna :v gak kayak dia yang udah sempurna :)";
+                if (t.includes("ping")) {
+    const imageUrl = "https://i.ibb.co.com/DQwQtG4/Tambahkan-subjudul-20240607-124230-0000.png"; // Ganti dengan URL gambar yang ingin Anda kirimkan
+    const time = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    const imageCard = document.createElement("div");
+    imageCard.classList.add("chat-card");
+    imageCard.classList.add("bot-message"); // Menggunakan bot-message agar tampil di sisi kanan
+    imageCard.innerHTML = `<img src="${imageUrl}" alt="Pesan Gambar">`;
+    const timestamp = document.createElement("div");
+    timestamp.classList.add("timestamp");
+    timestamp.textContent = time;
+    imageCard.appendChild(timestamp);
+    chatLog.appendChild(imageCard);
+    chatLog.scrollTop = chatLog.scrollHeight;
+    saveMessage(`<img src="${imageUrl}" alt="Pesan Gambar">`, false, time);
+    t.value = "";
+    return;
+}
+
                 if (t.includes("hai") || t.includes("halo") || t.includes("hello") || t.includes("hi")) return "Halo!\n\nGw tuh Zenu AI, ada yang bisa gw bantu? kalau gak butuh bantuan gausah spam! ntar limit lu habis malah nangis awokawok.\n\nKetik Tutorial biar lu bisa baca tutorial cara pake Zenu AI tuh gimana wkwkw.";
                 if (t.includes("yaudah") || t.includes("ywdh") || "ok" === t) {
                     const e = ["yaudah, ada yang bisa gw bantu? kalau gak ada gausah spam! ntar limit lu abis malah nangess awokawok", "Siapp lah, ada yang bisa gw bantu? kalau gak ada gausah spam! ati ati limit lu abis wkwkw :v", "Siap boss!, ada yang bisa gw bantu? kalau gak ada gausah spam! kalo limit lu abis jan salahin gw soalnya lu yang ngespam", "Oke, gw ngerti, ada yang bisa gw bantu? kalau gak ada gausah spam! ntar limit lu abis jan nangis", "oughey, jangan spam yak ntar limit lu habis malah nangis awoakowwoo :v"];
