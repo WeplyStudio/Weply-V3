@@ -13,7 +13,7 @@
         }
 
         #chat-container {
-            max-width: 400px;
+            width: 100%;
             margin: 0 auto;
             background-color: #ffffff;
             border-radius: 5px;
@@ -94,7 +94,7 @@
             padding: 10px;
             border: none;
             border-radius: 3px;
-            outline: none;
+            outline: none;                        
         }
 
         #send-button {
@@ -134,7 +134,7 @@
             </div>
         </div>
         <center>
-        <div id="header" style="width:80%;margin:10px;border-radius:5px;padding:10px"">Zenu AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
+        <div id="header" style="width:80%;margin:10px;bordpx-radius:5px;padding:10px"">Zenu AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
         </center>
         <div id="chat-log">
         </div>
@@ -150,7 +150,7 @@
                 t = document.getElementById("user-input"),
                 n = document.getElementById("send-button"),
                 a = document.getElementById("delete-button"),
-                o = 999999999999,
+                o = 100,
                 s = "chatbotMessageLimit",
                 mKey = "chatbotMessages";
 
@@ -291,6 +291,7 @@
     </script>
 </body>
 </html>
+
 <script>
     const password = "friend123";
 
