@@ -94,7 +94,7 @@
             padding: 10px;
             border: none;
             border-radius: 3px;
-            outline: none;                        
+            outline: none;
         }
 
         #send-button {
@@ -134,7 +134,7 @@
             </div>
         </div>
         <center>
-        <div id="header" style="width:80%;margin:10px;bordpx-radius:5px;padding:10px"">Zenu AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
+        <div id="header" style="width:80%;margin:10px;bordpx-radius:5px;padding:10px">Zenu AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
         </center>
         <div id="chat-log">
         </div>
@@ -150,7 +150,7 @@
                 t = document.getElementById("user-input"),
                 n = document.getElementById("send-button"),
                 a = document.getElementById("delete-button"),
-                o = 100,
+                o = 99999999999999999999,
                 s = "chatbotMessageLimit",
                 mKey = "chatbotMessages";
 
@@ -257,11 +257,11 @@
                             result = num1 / num2;
                             break;
                         default:
-                            result = "Operasi tidak dikenal";
+                            result = "Operator tidak dikenal";
                     }
-                    return `Hasil dari ${e} adalah ${result}`;
+                    return `Hasil dari ${num1} ${operator} ${num2} adalah ${result}`;
                 }
-
+                
                 if (t.includes("ada") || t.includes("ad") || t.includes("ada dong") || t.includes("ad dong") || t.includes("ada duong") || t.includes("yah ada dong")) return "Emang lu butuh bantuan apaan? sini kasih tau gw, tapi ntar aja pas gw udah di upgrade, soalnya gw nih masih belum pinter, masih harus banyak belajar awoakwowk :)";
                 if (t.includes("tutorial") || t.includes("Tutorial")) return "𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹\n\n1. Kalau lu mau ngitung cukup ketik angka sama simbol nya aja, contoh 6 + 9 atau 9 x 6 atau 7 - 6 atau 5 : 5\n\n2. Kalau mau cek limit tinggal ketik .limit aja.\n\nNah fitur nya baru itu aja ntar bakalan diupdate lagi kok versi bot nya terus ditambahin fitur nya ama owner"
                 if (t.includes("berapa limit saya") || t.includes("berapa limit gw") || t.includes("woy berapa limit gw") || t.includes("sisa limit") || t.includes(".limit")) return `Sisa limit pesan harian kamu adalah ${o - l.count} pesan.`;
@@ -283,24 +283,22 @@
             }
 
             function p(e) {
-                const t = ["anjing", "babi", "bangsat", "kontol", "ngentod", "memek", "asu", "chawnimale", "chibay", "cibay", "entod", "sange", "asw", "bangke", "anjay", "anj", "anjrit", "anjir", "bodoh", "goblok", "gblk", "tolol", "pepek", "toket", "tobrut", "kemem", "gblk", "ngtd", "jnck", "bngke", "mmk", "mmek", "memk", "kontl", "kntol", "kntl", "kintil", "bgst", "ppk", "anjr", "cnm", "cby", "ewe", "ew", "bacot", "bodoh", "bego", "pukimak", "kimak", "anying"], n = e.toLowerCase();
+                const t = ["anjing", "babi", "bangsat", "kontol", "ngentod", "memek", "asu", "chawnimale", "chibay", "cibay", "entod", "sange", "asw", "bangke", "anjay", "anj", "anjrit", "anjir", "bodoh", "goblok", "gblk", "tolol", "pepek", "toket", "tobrut", "kemem", "gblk", "ngtd", "jnck", "bngke", "mmk", "mmek", "memk", "kontl", "kntol", "kntl", "kintil", "bgst", "ppk", "anjr", "cnm", "cby", "ewe", "ew", "bacot", "bodoh", "bego", "pukimak", "kimak", " anying", "pussy", "dick", "vagina", "penis", "tetek", "payudara", "sperma", "cum"], n = e.toLowerCase();
                 for (const e of t) if (n.includes(e)) return !0;
                 return !1
             }
         });
+
+            // Cek apakah pengguna sudah pernah memasukkan password yang benar
+            if (!localStorage.getItem("authenticated")) {
+                const password = prompt("Masukkan password:");
+                if (password !== "Sung@1@mengal!R^d3ng@n&t3n@ng,m3ngh@ntarK@n^p3s@n!k3ab&d!@n^d@l@m@l!r@n^waktu.&Hut@n^r!m#y@ng&b3rkabUt&meny3mbuny!k@n^m!st3r!&d@l@m^p3luk@nnya.&K3hid!up@n^ad@l@h^s3buah^p3rjal@n@n^t@k^t3rd3ga,&m3l@lui^liku-l!k@&y@ng&m3mb3nt@ng^d!^s3panj@ng^j@l@n.&B!nt@ng-b!nt@ng^b3rs!n@r^d!^l@ng!t^y@ng^g3l@p^s3p3rt!^p3tunjUk^b@g!^p@r@^p3nj3l@h^y@ng^h!l@ng^d!^sam#dr@^rU@ng^@ngkas@.&Ti@d@^bat@s^bag!^y@ng^b3r@n!^m3l@ngk@h&m3nuju^k3b3r@n!@n^y@ng^t3rs3mbuny!^d!^bal!k^k3takUt@n.&H@r@p@n^ad@l@h^c@h@y@^y@ng^m3m@ndu^d!^t3ng@h^k3g3l@p@n,&m3nyulUt^@p!^d!^h@t!^y@ng^t3rs3s@t^d!^p@d@ng^g@r!@n^k3s3nd!r!@n.&S3t!@p^d3t!k^@d@l@h^s3buah^pUzzl3^y@ng^m3nUnggu^untUk^d!p3c@hk@n,&m3mbuk@^j@l@n^m3nuju^k3b!j@ks@n@@n^y@ng^...") {
+                    alert("Password salah!");
+                    window.location.href = "about:blank";
+                } else {
+                    localStorage.setItem("authenticated", true);
+                }
+            };
     </script>
 </body>
 </html>
-
-<script>
-    const password = "Sung@1@mengal!R^d3ng@n&t3n@ng,m3ngh@ntarK@n^p3s@n!k3ab&d!@n^d@l@m@l!r@n^waktu.&Hut@n^r!m#y@ng&b3rkabUt&meny3mbuny!k@n^m!st3r!&d@l@m^p3luk@nnya.&K3hid!up@n^ad@l@h^s3buah^p3rjal@n@n^t@k^t3rd3ga,&m3l@lui^liku-l!k@&y@ng&m3mb3nt@ng^d!^s3panj@ng^j@l@n.&B!nt@ng-b!nt@ng^b3rs!n@r^d!^l@ng!t^y@ng^g3l@p^s3p3rt!^p3tunjUk^b@g!^p@r@^p3nj3l@h^y@ng^h!l@ng^d!^sam#dr@^rU@ng^@ngkas@.&Ti@d@^bat@s^bag!^y@ng^b3r@n!^m3l@ngk@h&m3nuju^k3b3r@n!@n^y@ng^t3rs3mbuny!^d!^bal!k^k3takUt@n.&H@r@p@n^ad@l@h^c@h@y@^y@ng^m3m@ndu^d!^t3ng@h^k3g3l@p@n,&m3nyulUt^@p!^d!^h@t!^y@ng^t3rs3s@t^d!^p@d@ng^g@r!@n^k3s3nd!r!@n.&S3t!@p^d3t!k^@d@l@h^s3buah^pUzzl3^y@ng^m3nUnggu^untUk^d!p3c@hk@n,&m3mbuk@^j@l@n^m3nuju^k3b!j@ks@n@@n^y@ng^...";
-
-const enteredPassword = prompt("Masukkan password untuk mengakses website:");
-
-if (enteredPassword !== password) {
-  alert("Password salah. Akses ditolak.");
-  window.location.href = "about:blank";
-} else {
-  alert("Password benar. Akses diizinkan.");
-}
-</script>
