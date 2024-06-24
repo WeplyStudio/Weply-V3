@@ -1,0 +1,20 @@
+{
+  "name": "Weply Studio",
+  "short_name": "Weply",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://i.ibb.co.com/8Dz0LZ0/IMG-20240620-130835-485-1.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://i.ibb.co.com/8Dz0LZ0/IMG-20240620-130835-485-1.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
