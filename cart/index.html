@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pembayaran</title>
+    <style>
+        body {
+            font-family: Poppins;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;            
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            border: 3px solid #00008B;
+            position: relative;
+            line-height: 5px;
+        }
+        .button {
+            background-color: #00008B;
+            color: white;
+            border-radius: 150px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 0px;
+            align-item: center;
+        }
+        .button:active {
+            background-color: #fff;
+            color: #00008B;
+            border: 1px solid #00008B;
+            border-radius: 150px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }        
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: left;
+        }
+        .timer {
+            font-size: 20px;
+            color: #00008B;
+        }
+        .check-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: green;
+        }
+          }
+    </style>
+</head>
+<body>
+    <div class="card">        
+        <span id="check-icon" class="material-symbols-outlined" style="font-size:80px;color:#00008B">check_circle</span>
+        <h1>Checkout</h1><br>
+        <p>Layanan : <span id="nama-barang"></span></p>
+        <p>Harga : Rp<span id="harga-barang"></span></p>
+        <p>ID Pesanan: <span id="angka-acak"></span></p>
+        <p>Waktu tersisa: <span class="timer" id="countdown"></span></p>
+        <br>
+        <button class="button" id="confirm-button">Konfirmasi Pembayaran</button>
+    </div>
+    <script>
+        // Function to generate a random 10-digit number
+        function generateRandom15DigitNumber() {
+            let number = '';
+            for (let i = 0; i < 10; i++) {
+                number += Math.floor(Math.random() * 10).toString();
+            }
+            return number;
+        }
+
+        // Function to display the random number
+        function displayRandomNumber() {
+            let randomNumber = generateRandom15DigitNumber();
+            document.getElementById('angka-acak').textContent = randomNumber;
+            return randomNumber;
+        }
+
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            urlParams.forEach((value, key) => {
+                params[key] = value;
+            });
+
+            return params;
+        }
+
+        // Function to display item details
+        function displayItemDetails() {
+            const params = getQueryParams();
+
+            const namaBarang = params['item'] || 'NaN';
+            const hargaBarang = params['harga'] || 'NaN';
+
+            document.getElementById('nama-barang').textContent = namaBarang.replace(/\+/g, ' ');
+            document.getElementById('harga-barang').textContent = hargaBarang;
+        }
+
+        // Countdown timer function
+        function startCountdown(duration, display) {
+            let timer = duration, minutes, seconds;
+            const interval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    alert("Waktu telah habis. Harap muat ulang halaman.");
+                    localStorage.removeItem('endTime');
+                    localStorage.removeItem('orderID');
+                }
+            }, 1000);
+        }
+
+        // Function to set or retrieve countdown end time from local storage
+        function initializeCountdown(orderID) {
+            const countdownDisplay = document.getElementById('countdown');
+            let endTime = localStorage.getItem('endTime');
+            const storedOrderID = localStorage.getItem('orderID');
+
+            if (!endTime || orderID !== storedOrderID) {
+                const now = new Date().getTime();
+                endTime = now + 30 * 60 * 1000; // 30 minutes from now
+                localStorage.setItem('endTime', endTime);
+                localStorage.setItem('orderID', orderID);
+            }
+
+            const timeRemaining = endTime - new Date().getTime();
+
+            if (timeRemaining > 0) {
+                startCountdown(Math.floor(timeRemaining / 1000), countdownDisplay);
+            } else {
+                alert("Waktu telah habis!");
+                localStorage.removeItem('endTime');
+                localStorage.removeItem('orderID');
+            }
+        }
+
+        // Function to open WhatsApp with pre-filled message
+        function openWhatsApp() {
+            const namaBarang = document.getElementById('nama-barang').textContent;
+            const hargaBarang = document.getElementById('harga-barang').textContent;
+            const orderID = document.getElementById('angka-acak').textContent;
+            const nomorWhatsApp = '6283898777054';
+            const message = `Halo, saya ingin mengkonfirmasi pembayaran untuk:\nLayanan: ${namaBarang}\nHarga: Rp${hargaBarang}\nID Pesanan: ${orderID}`;
+
+            const url = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // Function to display check icon based on info parameter
+        function displayCheckIcon() {
+            const params = getQueryParams();
+            const info = params['info'];
+
+            if (info === 'done') {
+                document.getElementById('check-icon').style.display = 'block';
+            } else {
+                document.getElementById('check-icon').style.display = 'none';
+            }
+        }
+
+        // Call functions when the page loads
+        window.onload = function() {
+            const randomNumber = displayRandomNumber();
+            displayItemDetails();
+            initializeCountdown(randomNumber);
+            displayCheckIcon();
+
+            document.getElementById('confirm-button').addEventListener('click', openWhatsApp);
+        };
+    </script>
+</body>
+</html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
