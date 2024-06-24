@@ -22,4 +22,7 @@ body {
     align-items: center; /* Memposisikan card di tengah secara vertikal */
     height: 100%;
     margin-top: 40px;
-}    
+}
+    .card {
+        border: 1px #00008B solid;
+    }

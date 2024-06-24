@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weply - Cart</title>
+    <style>
+        body {
+            font-family: Poppins;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 60%;
+            margin-bottom: 10%;
+            width: 80%;
+            text-align: center;
+            border: 3px solid #00008B;
+        }
+            .button {
+            background-color: #00008B;
+            color: white;
+            border-radius: 150px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 0px;
+            }
+            .button:active {
+            background-color: #fff;
+            color: #00008B;
+            border: 1px solid #00008B;
+            border-radius: 150px;
+            padding: 10px 20px;
+            cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+<center>
+<div class="card">
+    <i class="fa-solid fa-face-grin-wink" style="font-size:50px;color:#00008B"></i>
+    <h1>404 | Error Page</h1>
+    <p>Uhmm... Sepertinya halaman yang kamu tuju itu gak ada 🤔🤔 mungkin aja lagi diperbaikin 😁😁</p>
+    <button id="back" class="button">Kembali Ke Rumah...</button>
+</div>
+</center>
+</body>
+</html>
+<script>
+    document.getElementById('back').addEventListener('click', function(){
+        window.location.href = "https://weplystudio.my.id"
+    })
+</script>
+<script src="https://kit.fontawesome.com/73e99931c3.js" crossorigin="anonymous"></script>

@@ -10,7 +10,7 @@ s0.parentNode.insertBefore(s1,s0);
 
 window.addEventListener('devicemotion', function(event) {
   var acceleration = event.accelerationIncludingGravity;
-  var threshold = 30; // Sesuaikan threshold dengan kebutuhan Anda
+  var threshold = 50; // Sesuaikan threshold dengan kebutuhan Anda
 
   var totalAcceleration = Math.sqrt(
     Math.pow(acceleration.x, 2) +
@@ -29,17 +29,80 @@ window.addEventListener('devicemotion', function(event) {
 });
 
 function showAlert() {
-        alert("Gratis domain .my.id / .biz.id tanpa minimal durasi, Gratis domain senilai 160.000 untuk pembelian minimal 12 bulan")
+        swal({
+      title: "Free Domain!",
+      icon: "warning",      
+      text: "Gratis domain .my.id setiap pembelian website hosting apapun selama minimal 12 bulan.",
+      buttons: true
+    });
         };
         
 function visitBasic() {
-        window.location.href = "//wa.me/6283898777054?text=Hai%20weply%20studio!%0ASaya%20ingin%20membeli%20web%20hosting%20paket%20basic"
+        window.location.href = "/cart/index.html?item=Website+Hosting+Basic+(1 Bln)&harga=10.000"
         };
-
 function visitStandart() {
-        window.location.href = "//wa.me/6283898777054?text=Hai%20weply%20studio!%0ASaya%20ingin%20membeli%20web%20hosting%20paket%20standart"
+        window.location.href = "/cart/index.html?item=Website+Hosting+Standart+(1 Bln)&harga=35.000"
         };
-        
 function visitSuper() {
-        window.location.href = "//wa.me/6283898777054?text=Hai%20weply%20studio!%0ASaya%20ingin%20membeli%20web%20hosting%20paket%20super"
+        window.location.href = "/cart/index.html?item=Website+Hosting+Super+(1 Bln)&harga=50.000"
         };
+function visitCloudBasic() {
+        window.location.href = "/cart/index.html?item=Cloud+Hosting+Basic+(1 Bln)&harga=80.000"
+        };
+function visitCloudStandart() {
+        window.location.href = "/cart/index.html?item=Cloud+Hosting+Standart+(1 Bln)&harga=230.000"
+        };
+function visitCloudSuper() {
+        window.location.href = "/cart/index.html?item=Cloud+Hosting+Super+(1 Bln)&harga=485.000"
+        };
+function visitEmailBasic() {
+        window.location.href = "/cart/index.html?item=Email+Hosting+Basic+(1 Bln)&harga=50.000"
+        };
+function visitEmailStandart() {
+        window.location.href = "/cart/index.html?item=Email+Hosting+Standart+(1 Bln)&harga=125.000"
+        };
+function visitEmailSuper() {
+        window.location.href = "/cart/index.html?item=Email+Hosting+Super+(1 Bln)&harga=250.000"
+        };
+function visitVpsBasic() {
+        window.location.href = "/cart/index.html?item=Vps+Cloud+Basic+(1 Bln)&harga=99.000"
+        };
+function visitVpsStandart() {
+        window.location.href = "/cart/index.html?item=Vps+Cloud+Standart+(1 Bln)&harga=129.000"
+        };
+function visitVpsSuper() {
+        window.location.href = "/cart/index.html?item=Vps+Cloud+Super+(1 Bln)&harga=149.000"
+        };
+function visitVpsExtra() {
+        window.location.href = "/cart/index.html?item=Vps+Cloud+Extra+(1 Bln)&harga=179.000"
+        };
+function visitVpsBisnis() {
+        window.location.href = "/cart/index.html?item=Vps+Cloud+Bisnis+(1 Bln)&harga=199.000"
+        };
+function visitLogoBasic() {
+        window.location.href = "/cart/index.html?item=Logo+Basic&harga=149.000"
+        };
+function visitLogoStandart() {
+        window.location.href = "/cart/index.html?item=Logo+Standart&harga=299.000"
+        };
+function visitLogoSuper() {
+        window.location.href = "/cart/index.html?item=Logo+Super&harga=449.000"
+        };
+function visitSosmedBasic() {
+        window.location.href = "/cart/index.html?item=Kelola+Sosmed+Basic+(1 Bln)&harga=699.000"
+        };
+function visitSosmedStandart() {
+        window.location.href = "/cart/index.html?item=Kelola+Sosmed+Standart+(1 Bln)&harga=1.349.000"
+        };
+function visitSosmedSuper() {
+        window.location.href = "/cart/index.html?item=Kelola+Sosmed+Super&harga=2.499.000"
+        };
+function visitSosmedExtra() {
+        window.location.href = "/cart/index.html?item=Kelola+Sosmed+Extra&harga=4.799.000"
+        };
+function visitSosmedVip() {
+        window.location.href = "/cart/index.html?item=Kelola+Sosmed+VIP&harga=12.799.000"
+        };
+function visitSosmedAkhir() {
+        window.location.href = "/cart/index.html?item=Kelola+Sosmed+Akhir&harga=34.849.000"
+}
