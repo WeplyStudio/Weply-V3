@@ -568,3 +568,14 @@ function visitCloudSuper() {
         window.location.href = "/cart/index.html?item=Cloud+Hosting+Super+(1 Bln)&harga=485.000"
         };
 </script>
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+    }
+  </script>
