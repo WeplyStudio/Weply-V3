@@ -1,7 +1,7 @@
 {
   "name": "Weply Studio",
   "short_name": "Weply",
-  "start_url": "/index.html",
+  "start_url": "/id.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
