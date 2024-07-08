@@ -630,3 +630,14 @@ function visitVpsBisnis() {
         window.location.href = "/cart/index.html?item=Vps+Cloud+Bisnis+(1 Bln)&harga=199.000"
         };
 </script>
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+    }
+  </script>
