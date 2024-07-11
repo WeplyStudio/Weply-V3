@@ -98,10 +98,7 @@
             });
 
             setTimeout(function() {
-                const iframe = document.createElement('iframe');
-                iframe.src = '/id';
-                document.body.innerHTML = '';
-                document.body.appendChild(iframe);
+                window.location.href = "/id"
             }, 10000);
         });
     </script>
