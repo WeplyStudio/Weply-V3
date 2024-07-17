@@ -105,9 +105,10 @@
     <div class="background"></div>
     <div class="container">
         <div class="header">
-            Checkout
+            Halaman Pembayaran
         </div>
         <span id="check-icon" class="material-symbols-outlined check-icon">check_circle</span>
+        <h1>Checkout</h1>
         <p>Layanan : <span id="nama-barang"></span></p>
         <p>Harga : Rp<span id="harga-barang"></span></p>
         <p>ID Pesanan: <span id="angka-acak"></span></p>
@@ -201,6 +202,27 @@
             }
         }
 
+        // Function to send data to Google Sheets
+        function sendDataToGoogleSheets(namaBarang, orderID) {
+            const url = 'https://script.google.com/macros/s/AKfycbyJ--JLAmmm9PIbpWeN2cKbkqvHoz0IpM94dAAPhRFf3haelti4jyiMq-z02JCuQ1TLKg/exec'; // ganti dengan URL web app Anda
+            const data = {
+                namaBarang: namaBarang,
+                orderID: orderID
+            };
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => {
+                console.log('Data sent to Google Sheets');
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
         // Function to open WhatsApp with pre-filled message
         function openWhatsApp() {
             const namaBarang = document.getElementById('nama-barang').textContent;
@@ -209,6 +231,7 @@
             const nomorWhatsApp = '6283898777054';
             const message = `Halo, saya ingin mengkonfirmasi pembayaran untuk:\nLayanan: ${namaBarang}\nHarga: Rp${hargaBarang}\nID Pesanan: ${orderID}`;
 
+            sendDataToGoogleSheets(namaBarang, orderID); // Tambahkan ini
             const url = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }
