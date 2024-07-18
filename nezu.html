@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
+    <title>Lily AI</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Barcode+128&display=swap">
     <style>
@@ -145,12 +145,12 @@
     <div id="chat-container">
         <div id="header">
             <div id="user-profile">
-                <img src="https://i.ibb.co.com/DQwQtG4/Tambahkan-subjudul-20240607-124230-0000.png" alt="User Avatar">
-                <h2>Nezu AI</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYMw6VZX2vLvjr0x9D93W6yMXMYGExzdrdK-YBcJIeLQ&s" alt="User Avatar">
+                <h2>Lily AI</h2>
             </div>
         </div>
         <center>
-        <div id="header" style="width:80%;margin:10px;bordpx-radius:5px;padding:10px"">Nezu AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
+        <div id="header" style="width:80%;margin:10px;bordpx-radius:5px;padding:10px"">Lily AI menggunakan layanan aman dari Weply Studio untuk mengelola chat ini. Ketuk untuk info selengkapnya.</div>
         </center>
         <div id="chat-log">
         </div>
@@ -324,7 +324,7 @@
     return;
 }
 
-                if (t.includes("hai") || t.includes("halo") || t.includes("hello") || t.includes("hi")) return "Halo!\n\nGw tuh Nezu AI, ada yang bisa gw bantu? kalau gak butuh bantuan gausah spam! ntar limit lu habis malah nangis awokawok.\n\nKetik Tutorial biar lu bisa baca tutorial cara pake Nezu AI tuh gimana wkwkw.";
+                if (t.includes("hai") || t.includes("halo") || t.includes("hello") || t.includes("hi")) return "Halo!\n\nGw tuh Lily AI, ada yang bisa gw bantu? kalau gak butuh bantuan gausah spam! ntar limit lu habis malah nangis awokawok.\n\nKetik Tutorial biar lu bisa baca tutorial cara pake Lily AI tuh gimana wkwkw.";
                 if (t.includes("yaudah") || t.includes("ywdh") || "ok" === t) {
                     const e = ["yaudah, ada yang bisa gw bantu? kalau gak ada gausah spam! ntar limit lu abis malah nangess awokawok", "Siapp lah, ada yang bisa gw bantu? kalau gak ada gausah spam! ati ati limit lu abis wkwkw :v", "Siap boss!, ada yang bisa gw bantu? kalau gak ada gausah spam! kalo limit lu abis jan salahin gw soalnya lu yang ngespam", "Oke, gw ngerti, ada yang bisa gw bantu? kalau gak ada gausah spam! ntar limit lu abis jan nangis", "oughey, jangan spam yak ntar limit lu habis malah nangis awoakowwoo :v"];
                     return e[Math.floor(Math.random() * e.length)]
@@ -334,10 +334,10 @@
                     return e[Math.floor(Math.random() * e.length)]
                 }
                 if (t.includes("siapa yang buat lu?") || t.includes("oukey") || t.includes("siapa yang buat lu") || t.includes("siapa pencipta lu") || t.includes("siapa pencipta lu?") || t.includes("siapa yang punya lu?") || t.includes("owner lu saha?") || t.includes("siapa lu?") || t.includes("siapa lu") || t.includes("saha lu") || t.includes("saha lu?") || "pencipta lu?" === t) {
-                    const e = ["Gw tuh NezuAI, gw dibuat sama Weply Studio dan gw bakalan bantuin semua masalah lu, tapi masalah nya yang masuk akal dong, jangan suruh gw buat nyuri piring atau benerin laptop juga :v"];
+                    const e = ["Gw tuh LilyAI, gw dibuat sama Weply Studio dan gw bakalan bantuin semua masalah lu, tapi masalah nya yang masuk akal dong, jangan suruh gw buat nyuri piring atau benerin laptop juga :v"];
                     return e[Math.floor(Math.random() * e.length)]
                 }
-                return "Maaf, Nezu AI sedang dalam tahap pengembangan, beberapa perintah belum dapat dijawab otomatis oleh AI!"
+                return "Maaf, Lily AI sedang dalam tahap pengembangan, beberapa perintah belum dapat dijawab otomatis oleh AI!"
             }
 
             function p(e) {
