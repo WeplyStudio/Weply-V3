@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midtrans Snap Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .payment-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .payment-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .payment-container button {
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .payment-container button:hover {
+            background-color: #00796b;
+        }
+    </style>
+    <script type="text/javascript"
+            src="https://app.sandbox.midtrans.com/snap/snap.js"
+            data-client-key="Mid-client-Deg2jsh5gfBRK5iQ"></script>
+</head>
+<body>
+
+<div class="payment-container">
+    <h1>Checkout</h1>
+    <p>Total: Rp 200,000</p>
+    <button id="pay-button">Bayar Sekarang!</button>
+</div>
+
+<script type="text/javascript">
+    document.getElementById('pay-button').onclick = function () {
+        // Data transaksi (biasanya data ini akan datang dari backend)
+        var transactionData = {
+            transaction_details: {
+                order_id: 'ORDER-' + Math.floor(Math.random() * 1000000000),
+                gross_amount: 200000
+            },
+            credit_card: {
+                secure: true
+            },
+            customer_details: {
+                first_name: "Budi",
+                last_name: "Setiawan",
+                email: "budi.setiawan@example.com",
+                phone: "081234567890"
+            }
+        };
+
+        // Membuat token transaksi menggunakan client key langsung di frontend
+        fetch('https://app.sandbox.midtrans.com/snap/v1/transactions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': 'Basic ' + btoa('Mid-client-Deg2jsh5gfBRK5iQ') // Gantilah <YOUR_CLIENT_KEY> dengan Client Key Anda
+            },
+            body: JSON.stringify(transactionData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Menggunakan Snap Token untuk memunculkan popup pembayaran
+            window.snap.pay(data.token);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    };
+</script>
+
+</body>
+</html>
