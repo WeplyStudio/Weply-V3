@@ -1,611 +1,692 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Weply Studio - Platform Website Hosting Terbaik">
-    <meta name="description" content="Weply Studio adalah platform website hosting terbaik yang menawarkan layanan hosting berkualitas tinggi dengan fitur canggih, kecepatan luar biasa, dan dukungan pelanggan yang handal.">
-    <meta name="keywords" content="Weply Studio, website hosting, hosting terbaik, layanan hosting, hosting cepat, dukungan pelanggan hosting">
-    <meta name="author" content="Weply Studio">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="id">
-    <meta name="revisit-after" content="7 days">
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
-    <meta property="og:title" content="Weply Studio - Platform Website Hosting Terbaik">
-    <meta property="og:description" content="Weply Studio adalah platform website hosting terbaik yang menawarkan layanan hosting berkualitas tinggi dengan fitur canggih, kecepatan luar biasa, dan dukungan pelanggan yang handal.">
-    <meta property="og:image" content="https://www.weplystudio.my.id/logo.png">
-    <meta property="og:url" content="https://www.weplystudio.my.id">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Weply Studio">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Weply Studio - Platform Website Hosting Terbaik">
-    <meta name="twitter:description" content="Weply Studio adalah platform website hosting terbaik yang menawarkan layanan hosting berkualitas tinggi dengan fitur canggih, kecepatan luar biasa, dan dukungan pelanggan yang handal.">
-    <meta name="twitter:image" content="https://www.weplystudio.my.id/logo.png">
-    <meta name="twitter:site" content="@weplystudio">
-    <meta name="twitter:creator" content="@weplystudio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Weply Studio">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="https://www.weplystudio.my.id/logo.png">
-    <link rel="canonical" href="https://www.weplystudio.my.id">
-    <link rel="icon" href="https://www.weplystudio.my.id/logo.png" type="image/jpg">
-    <meta property="og:url" content="http://www.weplystudio.my.id" />
-    <meta property="og:type" content="Website" />
-    <meta property="og:title" content="Weply Studio - Platform Website Hosting Terbaik" />
-    <meta property="og:description" content="Penyedia Website Hosting terbaik di indonesia" />
-     <link rel="manifest" href="/manifest.json">
-    <meta property="og:image" content="http://www.weplystudio.my.id/logo.png" />
-    <title>Weply Studio - Platform Website Hosting Terbaik</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weply Studio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="tailwind.config.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link
-      rel="styleshee" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-  <script src="https://kit.fontawesome.com/571257941d.js" crossorigin="anonymous"></script>
-  <link href='https://fonts.googleapis.com/css?family=Anta' rel='stylesheet'>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  <link rel="manifest" href="/manifest.json">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+  <style>
+    body {
+       font-family: "Montserrat", sans-serif;
+    }
+  </style>
+  <style>
+        .fade-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        label.relative.inline-flex {
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+label.relative.inline-flex input[type="checkbox"]:checked ~ div:first-child {
+  background-color: #3b82f6;
+  transition: background-color 0.3s ease-in-out;
+}
+
+label.relative.inline-flex div:last-child {
+  transition: transform 0.3s ease-in-out; 
+}
+
+label.relative.inline-flex input[type="checkbox"]:checked ~ div:last-child {
+  transform: translateX(24px);
+}
+.leFlipInTop span { animation-name: leFlipInTop }
+@keyframes leFlipInTop {
+    from {
+        transform: perspective(600px);
+        opacity: 0
+    }
+    30% {
+        transform: perspective(600px) rotateX(180deg);
+        transform-origin: 0 0;
+        animation-timing-function: ease-out;
+    }
+    to { transform: perspective(600px) }
+}
+
+    </style>
+  <script>
+  // Disable text selection
+  document.addEventListener('selectstart', (e) => e.preventDefault());
+
+  // Disable context menu (right-click)
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+  // Disable copy event
+  document.addEventListener('copy', (e) => e.preventDefault());
+
+  console.log("Text copy-paste is disabled on this website.");
+</script>
 </head>
-<body>
-    <div class="container-2">
-    <nav class="bg-white-1 border-gray-200 dark:bg-gray-900" style="background-color: rgba(0, 0, 255, 0.5);backdrop-filter: blur(3px);-webkit-backdrop-filter: blur(10px);width:80%;border-radius:50px;margin-top:3px;margin-bottom:20px">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" style="color:white">Weply</span>
-
-    </a>
-    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white-500 rounded-lg " aria-controls="navbar-dropdown" aria-expanded="false" style="color:white">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-        </li>
-        <li>
-            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Layanan <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-  </svg></button>
-            <!-- Dropdown menu -->
-            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a href="web-hosting" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Website Hosting</a>
-                  </li>
-                  <li>
-                    <a href="cloud-hosting" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud Hosting</a>
-                  </li>
-                  <li>
-                    <a href="mail-hosting" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mail Hosting</a>
-                  </li>
-                  <li>
-                    <a href="vps" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">VPS Hosting</a>
-                  </li>
-                  <li>
-                    <a href="logo" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Desain Logo</a>
-                  </li>
-                  <li>
-                    <a href="sosmed" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kelola Sosmed</a>
-                  </li>
-                </ul>
-            </div>
-        </li>
-        <li>
-          <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About Us</a>
-        </li>
-        <li>
-          <a href="https://wa.me/6283898777054" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">WhatsApp</a>
-        </li>
-      </ul>
+<body class="bg-gray-900">
+<header class="bg-white shadow rounded-b-3xl fixed shadow-2xl" style="z-index: 10; width: 100%">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <h3 class="text-2xl text-gray-700 font-bold cssanimation leFlipInTop sequence">Weply Studio</h3>
+      </a>
     </div>
-  </div>
+    <div class="flex lg:hidden">
+      <!-- Button to open mobile menu -->
+      <button id="openSidebar" type="button" class="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 7h3m13 0h-9m9 10h-3M4 17h9m-9-5h16"/></svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="#" class="text-sm font-semibold text-gray-700">Features</a>
+      <a href="#" class="text-sm font-semibold text-gray-700">Marketplace</a>
+      <!-- Dropdown Menu -->
+      <div class="relative group">
+        <button class="text-sm font-semibold text-gray-700 flex items-center hover:text-gray-900">
+          Services
+          <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <!-- Dropdown Items -->
+        <div id="dropdownMenu" class="hidden mt-2 space-y-2 bg-gray-50 border border-gray-200 shadow-lg absolute right-0 w-100% group-hover:block">
+        <a href="./web-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Hosting</a>
+        <a href="./cloud-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cloud Hosting</a>
+        <a href="./vps-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">VPS Hosting</a>
+        <a href="./logo" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logo Design</a>
+        <a href="./wa-api" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">WhatsApp API</a>
+        <a href="./web-ai" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">AI Web Generated</a>
+      </div>
+      </div>
+      <a href="#" class="text-sm font-semibold text-gray-700">Company</a>
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="#" class="text-sm font-semibold text-gray-700">Log in <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </nav>
+</header>
+
+<nav class="flex items-center justify-center" aria-label="Breadcrumb">
+  <ol class="mt-40 mb-12 inline-flex items-center space-x-1 md:space-x-2">
+    <li class="inline-flex items-center">
+      <a href="#" class="inline-flex items-center text-sm font-medium text-white">
+        <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 1 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+        </svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <a href="#" class="ms-1 text-sm font-medium text-white">Services</a>
+      </div>
+    </li>
+    <li aria-current="page">
+      <div class="flex items-center">
+        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <span class="ms-1 text-sm font-medium text-white">Cloud Hosting</span>
+      </div>
+    </li>
+  </ol>
 </nav>
-</div>
 
-
-<!-- Landing page -->
-<center>
-    <br><br>
-    
-    <div style="max-width:80%;">
-<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white-900 md:text-5xl lg:text-6xl white:text-white" style="color:white">Solusi Kreatif Bagi Bisnis Anda!</h1>
-<p class="text-lg font-normal text-white-500 lg:text-xl white:text-white-400" style="color:white">Penyediaan solusi kreatif seperti Desain Grafis, Pembuatan Web, dan Pengelolaan Sosial Media. Jadikan kami sebagai penyedia pilihan bagi bisnis anda dalam menghadapi Era Digital.</p><br>
-
-<p style="color:white"><i class="bi bi-check" style="color:green;font-size:18px"></i>&ensp;Gratis Domain</p>
-<p style="color:white"><i class="bi bi-check" style="color:green;font-size:18px"></i>&ensp;Gratis Migrasi Web</p>
-<p style="color:white"><i class="bi bi-check" style="color:green;font-size:18px"></i>&ensp;Server anti delay</p><br>
-
-<p class="text-1xl" style="color:white;display: inline;">Rp</p><p class="text-4xl" style="color:white;display: inline;">35.000</p><p class="text-1xl" style="color:white;display: inline;">/Bulan</p><br><br>
-<br>
-<a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-    Learn more
-    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg>
-  
-</a><br><br>
-</center>
-</div><br>
-<!-- End landing page -->
-<div style="background-color:white"><center>
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
-          .path-0{
-            animation:pathAnim-0 4s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-          @keyframes pathAnim-0{
-            0%{
-              d: path("M 0,400 L 0,150 C 30.54251140301237,168.36278496629686 61.08502280602474,186.72556993259371 102,209 C 142.91497719397526,231.27443006740629 194.20242017891343,257.460505235922 231,218 C 267.7975798210866,178.53949476407794 290.1052964783214,73.43240912371803 320,75 C 349.8947035216786,76.56759087628197 387.37639390780106,184.80985826920582 429,192 C 470.62360609219894,199.19014173079418 516.3891278904744,105.32815779945876 549,101 C 581.6108721095256,96.67184220054124 601.0670945303013,181.8775105329591 643,192 C 684.9329054696987,202.1224894670409 749.3424939883201,137.1618000687049 791,132 C 832.6575060116799,126.8381999312951 851.562929516418,181.47528919222128 878,177 C 904.437070483582,172.52471080777872 938.4057879460078,108.93704316240998 976,106 C 1013.5942120539922,103.06295683759002 1054.8139186995504,160.77653815813878 1092,161 C 1129.1860813004496,161.22346184186122 1162.3385372557905,103.95680420503497 1204,100 C 1245.6614627442095,96.04319579496503 1295.8319322772873,145.39624502172134 1339,150 C 1382.1680677227127,154.60375497827866 1418.3337336350608,114.45821570807962 1434,107 C 1449.6662663649392,99.54178429192038 1444.8331331824697,124.77089214596019 1440,150 L 1440,400 L 0,400 Z");
-            }
-            25%{
-              d: path("M 0,400 L 0,150 C 32.02950836470726,102.54518553937376 64.05901672941452,55.09037107874754 95,80 C 125.94098327058548,104.90962892125246 155.79344144704916,202.18370122438367 201,204 C 246.20655855295084,205.81629877561633 306.7672174823888,112.17482402371776 351,97 C 395.2327825176112,81.82517597628224 423.13768862339583,145.11700268074523 453,153 C 482.86231137660417,160.88299731925477 514.682028024028,113.35716525330133 548,107 C 581.317971975972,100.64283474669867 616.1341992804926,135.45433630604944 656,131 C 695.8658007195074,126.54566369395056 740.7811748540021,82.82548952250087 782,75 C 823.2188251459979,67.17451047749913 860.7411013034994,95.24370560394709 898,131 C 935.2588986965006,166.7562943960529 972.2544199320007,210.1996880617107 1004,216 C 1035.7455800679993,221.8003119382893 1062.2412189684972,189.9575421492101 1097,187 C 1131.7587810315028,184.0424578507899 1174.780704194011,209.97014334144885 1211,187 C 1247.219295805989,164.02985665855115 1276.6359642554587,92.16188448499456 1320,98 C 1363.3640357445413,103.83811551500544 1420.6754387841547,187.382318718573 1443,209 C 1465.3245612158453,230.617681281427 1452.6622806079226,190.3088406407135 1440,150 L 1440,400 L 0,400 Z");
-            }
-            50%{
-              d: path("M 0,400 L 0,150 C 36.83766243322495,187.2002129552501 73.6753248664499,224.4004259105002 112,223 C 150.3246751335501,221.5995740894998 190.13636296742538,181.59850931324934 228,175 C 265.8636370325746,168.40149068675066 301.7792232638486,195.2055368365026 338,182 C 374.2207767361514,168.7944631634974 410.7467439771805,115.57934334074027 448,115 C 485.2532560228195,114.42065665925973 523.2338008274295,166.47708980053636 555,195 C 586.7661991725705,223.52291019946364 612.3180527131013,228.51229745711427 644,192 C 675.6819472868987,155.48770254288573 713.4939883201649,77.47372037100654 758,77 C 802.5060116798351,76.52627962899346 853.7059940062392,153.5928210588596 893,173 C 932.2940059937608,192.4071789411404 959.682035654879,154.154995393555 994,126 C 1028.317964345121,97.84500460644499 1069.5658633742453,79.78719736692035 1110,79 C 1150.4341366257547,78.21280263307965 1190.0545108481406,94.6962151387636 1223,106 C 1255.9454891518594,117.3037848612364 1282.216093233193,123.42794207802518 1324,113 C 1365.783906766807,102.57205792197482 1423.0811162190878,75.59201654913565 1445,79 C 1466.9188837809122,82.40798345086435 1453.4594418904562,116.20399172543218 1440,150 L 1440,400 L 0,400 Z");
-            }
-            75%{
-              d: path("M 0,400 L 0,150 C 30.42730095027261,173.9494394799248 60.85460190054522,197.89887895984958 98,176 C 135.14539809945478,154.10112104015042 179.0088933480918,86.3539236405264 215,103 C 250.9911066519082,119.6460763594736 279.10982470708774,220.68542647804475 316,222 C 352.89017529291226,223.31457352195525 398.5518078235572,124.90437044729458 435,86 C 471.4481921764428,47.09562955270541 498.6829439986832,67.69709173277685 533,79 C 567.3170560013168,90.30290826722315 608.7164161817101,92.30726262159797 647,117 C 685.2835838182899,141.69273737840203 720.4513912744762,189.07385778083133 759,215 C 797.5486087255238,240.92614221916867 839.4780187203852,245.3973062550767 877,212 C 914.5219812796148,178.6026937449233 947.6365338439829,107.33691719886177 985,104 C 1022.3634661560171,100.66308280113823 1063.975845903684,165.25502494947625 1101,198 C 1138.024154096316,230.74497505052375 1170.4600825412804,231.64298300323318 1205,197 C 1239.5399174587196,162.35701699676682 1276.1838239311935,92.17304303759107 1316,80 C 1355.8161760688065,67.82695696240893 1398.8046217339447,113.66484484640256 1420,135 C 1441.1953782660553,156.33515515359744 1440.5976891330276,153.16757757679872 1440,150 L 1440,400 L 0,400 Z");
-            }
-            100%{
-              d: path("M 0,400 L 0,150 C 30.54251140301237,168.36278496629686 61.08502280602474,186.72556993259371 102,209 C 142.91497719397526,231.27443006740629 194.20242017891343,257.460505235922 231,218 C 267.7975798210866,178.53949476407794 290.1052964783214,73.43240912371803 320,75 C 349.8947035216786,76.56759087628197 387.37639390780106,184.80985826920582 429,192 C 470.62360609219894,199.19014173079418 516.3891278904744,105.32815779945876 549,101 C 581.6108721095256,96.67184220054124 601.0670945303013,181.8775105329591 643,192 C 684.9329054696987,202.1224894670409 749.3424939883201,137.1618000687049 791,132 C 832.6575060116799,126.8381999312951 851.562929516418,181.47528919222128 878,177 C 904.437070483582,172.52471080777872 938.4057879460078,108.93704316240998 976,106 C 1013.5942120539922,103.06295683759002 1054.8139186995504,160.77653815813878 1092,161 C 1129.1860813004496,161.22346184186122 1162.3385372557905,103.95680420503497 1204,100 C 1245.6614627442095,96.04319579496503 1295.8319322772873,145.39624502172134 1339,150 C 1382.1680677227127,154.60375497827866 1418.3337336350608,114.45821570807962 1434,107 C 1449.6662663649392,99.54178429192038 1444.8331331824697,124.77089214596019 1440,150 L 1440,400 L 0,400 Z");
-            }
-          }</style><path d="M 0,400 L 0,150 C 30.54251140301237,168.36278496629686 61.08502280602474,186.72556993259371 102,209 C 142.91497719397526,231.27443006740629 194.20242017891343,257.460505235922 231,218 C 267.7975798210866,178.53949476407794 290.1052964783214,73.43240912371803 320,75 C 349.8947035216786,76.56759087628197 387.37639390780106,184.80985826920582 429,192 C 470.62360609219894,199.19014173079418 516.3891278904744,105.32815779945876 549,101 C 581.6108721095256,96.67184220054124 601.0670945303013,181.8775105329591 643,192 C 684.9329054696987,202.1224894670409 749.3424939883201,137.1618000687049 791,132 C 832.6575060116799,126.8381999312951 851.562929516418,181.47528919222128 878,177 C 904.437070483582,172.52471080777872 938.4057879460078,108.93704316240998 976,106 C 1013.5942120539922,103.06295683759002 1054.8139186995504,160.77653815813878 1092,161 C 1129.1860813004496,161.22346184186122 1162.3385372557905,103.95680420503497 1204,100 C 1245.6614627442095,96.04319579496503 1295.8319322772873,145.39624502172134 1339,150 C 1382.1680677227127,154.60375497827866 1418.3337336350608,114.45821570807962 1434,107 C 1449.6662663649392,99.54178429192038 1444.8331331824697,124.77089214596019 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#00008b" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
-    <br>
-    <h3 class="text-2xl font-bold">Cloud Hosting</h3>
-    <hr style="border-width:5px;width:50px;color:#00008B;border-radius:6px;margin-top:2px">
-    <br>
-    
-<div class="w-full max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" style="max-width:85%;border-radius:15px;border: 3px solid #00008B">
-<h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400"><strong>Paket Basic</strong></h5>
-<div class="flex items-baseline text-gray-900 dark:text-white">
-<span class="text-3xl font-semibold" style="color:black">Rp</span>
-<span class="text-5xl font-extrabold tracking-tight" style="color:black">80.000</span>
-<span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/ Bulan</span><br>
-</div>
-<p>Rp800.000 / Tahun</p>
-<ul role="list" class="space-y-5 my-7">
-<li class="flex items-center">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">1vCPU</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">1GB Ram</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">10GB Storage</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Dedicated Resource</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Unlimited Bandwidth</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Domain Gratis</span>&emsp;<i class="bi bi-question-circle" onclick="showAlert()"></i>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">CloudFlare Protection</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Jaminan Garansi 30 Hari</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Proteksi DDOS</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">75.000 Kunjungan Bulanan</span>
-</li>
-</ul>
-<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" onclick="visitCloudBasic()""><strong><strong>Pilih Paket</strong></strong></button>
-</div><br>
-
-<div class="w-full max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" style="max-width:85%;border-radius:15px;border: 3px solid #00008B">
-<h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400"><strong>Paket Standart</strong></h5>
-<div class="flex items-baseline text-gray-900 dark:text-white">
-<span class="text-3xl font-semibold" style="color:black">Rp</span>
-<span class="text-5xl font-extrabold tracking-tight" style="color:black">230.000</span>
-<span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/ Bulan</span><br>
-</div>
-<p>Rp2.300.000 / Tahun</p>
-<ul role="list" class="space-y-5 my-7">
-<li class="flex items-center">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2vCPU</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">3GB Ram</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">30GB Storage</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Dedicated Resource</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Unlimited Bandwidth</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Domain Gratis</span>&emsp;<i class="bi bi-question-circle" onclick="showAlert()"></i>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">CloudFlare Protection</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Jaminan Garansi 30 Hari</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Proteksi DDOS</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">200.000 Kunjungan Bulanan</span>
-</li>
-</ul>
-<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" onclick="visitCloudStandart()"><strong><strong>Pilih Paket</strong></strong></button>
-</div><br>
-
-<div class="w-full max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" style="max-width:85%;border-radius:15px;border:3px solid #00008B">
-<h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400"><strong>Paket Super</strong></h5>
-<div class="flex items-baseline text-gray-900 dark:text-white"'">
-<span class="text-3xl font-semibold" style="color:black">Rp</span>
-<span class="text-5xl font-extrabold tracking-tight" style="color:black">485.000</span>
-<span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/ Bulan</span><br>
-</div>
-<p>Rp4.850.000 / Tahun</p>
-<ul role="list" class="space-y-5 my-7">
-<li class="flex items-center">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">4vCPU</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">6GB Ram</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">60GB Storage</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Dedicated Resource</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Unlimited Bandwidth</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Domain Gratis</span>&emsp;<i class="bi bi-question-circle" onclick="showAlert()"></i>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">CloudFlare Protection</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Jaminan Garansi 30 Hari</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Proteksi DDOS</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">500.000 Kunjungan Bulanan</span>
-</li>
-</ul>
-<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" onclick="visitCloudSuper()"><strong><strong>Pilih Paket</strong></strong></button>
-</div> 
-<br>
-<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
-          .path-0{
-            animation:pathAnim-0 4s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-          @keyframes pathAnim-0{
-            0%{
-              d: path("M 0,400 L 0,150 C 34.903985293714854,127.8440727568943 69.80797058742971,105.68814551378861 105,121 C 140.1920294125703,136.3118544862114 175.67210294399598,189.0914907017399 215,197 C 254.32789705600402,204.9085092982601 297.50361763658645,167.9458916792519 332,172 C 366.49638236341355,176.0541083207481 392.3134265096583,221.12494258125255 434,214 C 475.6865734903417,206.87505741874745 533.2426763247805,147.5543379957379 569,130 C 604.7573236752195,112.44566200426209 618.7158681912198,136.65770543579586 650,127 C 681.2841318087802,117.34229456420414 729.8938509103401,73.81484026107867 773,77 C 816.1061490896599,80.18515973892133 853.7087281674198,130.08293351988948 887,141 C 920.2912718325802,151.91706648011052 949.2712364199806,123.85342565936344 981,107 C 1012.7287635800194,90.14657434063656 1047.206326152657,84.50336384265675 1094,83 C 1140.793673847343,81.49663615734325 1199.9034589693908,84.13311897000955 1238,83 C 1276.0965410306092,81.86688102999045 1293.1798379697793,76.96416027730511 1330,94 C 1366.8201620302207,111.03583972269489 1423.3771891514916,150.01023992076998 1445,163 C 1466.6228108485084,175.98976007923002 1453.3114054242542,162.994880039615 1440,150 L 1440,400 L 0,400 Z");
-            }
-            25%{
-              d: path("M 0,400 L 0,150 C 36.06513367411442,168.84814381592423 72.13026734822884,187.6962876318485 115,167 C 157.86973265177116,146.3037123681515 207.54406428119904,86.06299328853025 239,90 C 270.45593571880096,93.93700671146975 283.693475526975,162.0517392140305 322,160 C 360.306524473025,157.9482607859695 423.68203361090104,85.73004985534769 459,88 C 494.31796638909896,90.26995014465231 501.57839002942103,167.02806136457875 533,185 C 564.421609970579,202.97193863542125 620.0044062714148,162.15770468633727 669,139 C 717.9955937285852,115.84229531366273 760.4039848849193,110.34111989007215 792,134 C 823.5960151150807,157.65888010992785 844.3796541889079,210.47781575337416 880,207 C 915.6203458110921,203.52218424662584 966.0773983594488,143.7476170964312 1006,135 C 1045.9226016405512,126.2523829035688 1075.310752373297,168.53171586090102 1107,185 C 1138.689247626703,201.46828413909898 1172.6795921473638,192.12551945996466 1214,176 C 1255.3204078526362,159.87448054003534 1303.970879037248,136.9662062992403 1344,134 C 1384.029120962752,131.0337937007597 1415.4368917036436,148.00965534307423 1430,154 C 1444.5631082963564,159.99034465692577 1442.2815541481782,154.9951723284629 1440,150 L 1440,400 L 0,400 Z");
-            }
-            50%{
-              d: path("M 0,400 L 0,150 C 38.69956828460239,111.67150521670868 77.39913656920479,73.34301043341735 116,94 C 154.60086343079521,114.65698956658265 193.10302200778324,194.29946348303926 229,219 C 264.89697799221676,243.70053651696074 298.18877539966235,213.45913563442554 333,198 C 367.81122460033765,182.54086436557446 404.14187639356726,181.8639939792585 436,168 C 467.85812360643274,154.1360060207415 495.243719026069,127.08488844854037 533,147 C 570.756280973931,166.91511155145963 618.8832475021567,233.79645222658013 663,218 C 707.1167524978433,202.20354777341987 747.223290965304,103.72930264513914 785,94 C 822.776709034696,84.27069735486086 858.2235886366274,163.28633719286333 888,199 C 917.7764113633726,234.71366280713667 941.8823544881872,227.12534858340746 977,193 C 1012.1176455118128,158.87465141659254 1058.2469934106239,98.21226847350684 1097,98 C 1135.7530065893761,97.78773152649316 1167.1296718693175,158.0255775225652 1201,163 C 1234.8703281306825,167.9744224774348 1271.2343191121067,117.68542143623245 1322,125 C 1372.7656808878933,132.31457856376755 1437.9330516822552,197.23273673250503 1460,211 C 1482.0669483177448,224.76726326749497 1461.0334741588724,187.38363163374748 1440,150 L 1440,400 L 0,400 Z");
-            }
-            75%{
-              d: path("M 0,400 L 0,150 C 46.1456698803905,193.02307760125834 92.291339760781,236.04615520251667 124,218 C 155.708660239219,199.95384479748333 172.98031083726653,120.83845679119173 211,112 C 249.01968916273347,103.16154320880827 307.78741689015294,164.6000176327165 342,200 C 376.21258310984706,235.3999823672835 385.87002160212177,244.76147267794227 422,217 C 458.12997839787823,189.23852732205773 520.7324967013602,124.3540916555145 561,126 C 601.2675032986398,127.6459083444855 619.1999915924374,195.82216069999978 652,198 C 684.8000084075626,200.17783930000022 732.4675369288904,136.35726554448644 769,110 C 805.5324630711096,83.64273445551358 830.929860692001,94.74877712205449 868,109 C 905.070139307999,123.25122287794551 953.8130203031055,140.6476259672955 992,165 C 1030.1869796968945,189.3523740327045 1057.8180580955766,220.66071900876335 1093,214 C 1128.1819419044234,207.33928099123665 1170.9147473145879,162.70949799765106 1206,149 C 1241.0852526854121,135.29050200234894 1268.5229526460726,152.5012890006324 1309,154 C 1349.4770473539274,155.4987109993676 1402.9934421011221,141.28534599981933 1427,138 C 1451.0065578988779,134.71465400018067 1445.503278949439,142.35732700009032 1440,150 L 1440,400 L 0,400 Z");
-            }
-            100%{
-              d: path("M 0,400 L 0,150 C 34.903985293714854,127.8440727568943 69.80797058742971,105.68814551378861 105,121 C 140.1920294125703,136.3118544862114 175.67210294399598,189.0914907017399 215,197 C 254.32789705600402,204.9085092982601 297.50361763658645,167.9458916792519 332,172 C 366.49638236341355,176.0541083207481 392.3134265096583,221.12494258125255 434,214 C 475.6865734903417,206.87505741874745 533.2426763247805,147.5543379957379 569,130 C 604.7573236752195,112.44566200426209 618.7158681912198,136.65770543579586 650,127 C 681.2841318087802,117.34229456420414 729.8938509103401,73.81484026107867 773,77 C 816.1061490896599,80.18515973892133 853.7087281674198,130.08293351988948 887,141 C 920.2912718325802,151.91706648011052 949.2712364199806,123.85342565936344 981,107 C 1012.7287635800194,90.14657434063656 1047.206326152657,84.50336384265675 1094,83 C 1140.793673847343,81.49663615734325 1199.9034589693908,84.13311897000955 1238,83 C 1276.0965410306092,81.86688102999045 1293.1798379697793,76.96416027730511 1330,94 C 1366.8201620302207,111.03583972269489 1423.3771891514916,150.01023992076998 1445,163 C 1466.6228108485084,175.98976007923002 1453.3114054242542,162.994880039615 1440,150 L 1440,400 L 0,400 Z");
-            }
-          }</style><path d="M 0,400 L 0,150 C 34.903985293714854,127.8440727568943 69.80797058742971,105.68814551378861 105,121 C 140.1920294125703,136.3118544862114 175.67210294399598,189.0914907017399 215,197 C 254.32789705600402,204.9085092982601 297.50361763658645,167.9458916792519 332,172 C 366.49638236341355,176.0541083207481 392.3134265096583,221.12494258125255 434,214 C 475.6865734903417,206.87505741874745 533.2426763247805,147.5543379957379 569,130 C 604.7573236752195,112.44566200426209 618.7158681912198,136.65770543579586 650,127 C 681.2841318087802,117.34229456420414 729.8938509103401,73.81484026107867 773,77 C 816.1061490896599,80.18515973892133 853.7087281674198,130.08293351988948 887,141 C 920.2912718325802,151.91706648011052 949.2712364199806,123.85342565936344 981,107 C 1012.7287635800194,90.14657434063656 1047.206326152657,84.50336384265675 1094,83 C 1140.793673847343,81.49663615734325 1199.9034589693908,84.13311897000955 1238,83 C 1276.0965410306092,81.86688102999045 1293.1798379697793,76.96416027730511 1330,94 C 1366.8201620302207,111.03583972269489 1423.3771891514916,150.01023992076998 1445,163 C 1466.6228108485084,175.98976007923002 1453.3114054242542,162.994880039615 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#00008b" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
-<div style="background-color:#00008B">
-<br>
-<center>
-    <h2 class="text-2xl" style="color:white">Keunggulan Kami</h2>
-    <hr style="border-width:5px;width:50px;color:#fff;border-radius:6px;margin-top:2px;">
-    <br>
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="background-color:#00008B;width:90%">
-    <i style="font-size:50px;color:#00008B" class="fa-solid fa-server"></i>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style="color:black">Lokasi Server</h5>
-    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kami memiliki Data center di negara indonesia dan memiliki kecepatan terbaik! Server kami dijamin anti delay dan memiliki performa terbaik!</p>
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-        </svg>
-    </a>
-</div>
-<br>
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="background-color:#00008B;width:90%">
-    <i style="font-size:50px;color:#00008B" class="fa-solid fa-shield-halved"></i>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style="color:black">Keamanan Terbaik</h5>
-    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kami memiliki server dengan keamanan terbaik! Dilindungi dengan cloudflare secured premium sehingga memiliki tingkat keamanan yang terbaik!</p>
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-        </svg>
-    </a>
-</div>
-<br>
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="background-color:#00008B;width:90%">
-    <i style="font-size:50px;color:#00008B" class="fa-solid fa-wrench"></i>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style="color:black">System Terbaru</h5>
-    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Untuk menjamin teknologi terbaru, kami menggunakan system auto update agar versi system kami selalu menjadi yang terbaru!</p>
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-        </svg>
-    </a>
-</div>
-<br>
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="background-color:#00008B;width:90%">
-    <i style="font-size:50px;color:#00008B" class="fa-solid fa-rocket"></i>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style="color:black">LiteSpeed Server</h5>
-    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Memiliki performa 20x lebih cepat dari web server biasa.</p>
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-        </svg>
-    </a>
-</div>
-</center>
-</div>
-<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
-          .path-0{
-            animation:pathAnim-0 4s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-          @keyframes pathAnim-0{
-            0%{
-              d: path("M 0,400 L 0,150 C 30.54251140301237,168.36278496629686 61.08502280602474,186.72556993259371 102,209 C 142.91497719397526,231.27443006740629 194.20242017891343,257.460505235922 231,218 C 267.7975798210866,178.53949476407794 290.1052964783214,73.43240912371803 320,75 C 349.8947035216786,76.56759087628197 387.37639390780106,184.80985826920582 429,192 C 470.62360609219894,199.19014173079418 516.3891278904744,105.32815779945876 549,101 C 581.6108721095256,96.67184220054124 601.0670945303013,181.8775105329591 643,192 C 684.9329054696987,202.1224894670409 749.3424939883201,137.1618000687049 791,132 C 832.6575060116799,126.8381999312951 851.562929516418,181.47528919222128 878,177 C 904.437070483582,172.52471080777872 938.4057879460078,108.93704316240998 976,106 C 1013.5942120539922,103.06295683759002 1054.8139186995504,160.77653815813878 1092,161 C 1129.1860813004496,161.22346184186122 1162.3385372557905,103.95680420503497 1204,100 C 1245.6614627442095,96.04319579496503 1295.8319322772873,145.39624502172134 1339,150 C 1382.1680677227127,154.60375497827866 1418.3337336350608,114.45821570807962 1434,107 C 1449.6662663649392,99.54178429192038 1444.8331331824697,124.77089214596019 1440,150 L 1440,400 L 0,400 Z");
-            }
-            25%{
-              d: path("M 0,400 L 0,150 C 32.02950836470726,102.54518553937376 64.05901672941452,55.09037107874754 95,80 C 125.94098327058548,104.90962892125246 155.79344144704916,202.18370122438367 201,204 C 246.20655855295084,205.81629877561633 306.7672174823888,112.17482402371776 351,97 C 395.2327825176112,81.82517597628224 423.13768862339583,145.11700268074523 453,153 C 482.86231137660417,160.88299731925477 514.682028024028,113.35716525330133 548,107 C 581.317971975972,100.64283474669867 616.1341992804926,135.45433630604944 656,131 C 695.8658007195074,126.54566369395056 740.7811748540021,82.82548952250087 782,75 C 823.2188251459979,67.17451047749913 860.7411013034994,95.24370560394709 898,131 C 935.2588986965006,166.7562943960529 972.2544199320007,210.1996880617107 1004,216 C 1035.7455800679993,221.8003119382893 1062.2412189684972,189.9575421492101 1097,187 C 1131.7587810315028,184.0424578507899 1174.780704194011,209.97014334144885 1211,187 C 1247.219295805989,164.02985665855115 1276.6359642554587,92.16188448499456 1320,98 C 1363.3640357445413,103.83811551500544 1420.6754387841547,187.382318718573 1443,209 C 1465.3245612158453,230.617681281427 1452.6622806079226,190.3088406407135 1440,150 L 1440,400 L 0,400 Z");
-            }
-            50%{
-              d: path("M 0,400 L 0,150 C 36.83766243322495,187.2002129552501 73.6753248664499,224.4004259105002 112,223 C 150.3246751335501,221.5995740894998 190.13636296742538,181.59850931324934 228,175 C 265.8636370325746,168.40149068675066 301.7792232638486,195.2055368365026 338,182 C 374.2207767361514,168.7944631634974 410.7467439771805,115.57934334074027 448,115 C 485.2532560228195,114.42065665925973 523.2338008274295,166.47708980053636 555,195 C 586.7661991725705,223.52291019946364 612.3180527131013,228.51229745711427 644,192 C 675.6819472868987,155.48770254288573 713.4939883201649,77.47372037100654 758,77 C 802.5060116798351,76.52627962899346 853.7059940062392,153.5928210588596 893,173 C 932.2940059937608,192.4071789411404 959.682035654879,154.154995393555 994,126 C 1028.317964345121,97.84500460644499 1069.5658633742453,79.78719736692035 1110,79 C 1150.4341366257547,78.21280263307965 1190.0545108481406,94.6962151387636 1223,106 C 1255.9454891518594,117.3037848612364 1282.216093233193,123.42794207802518 1324,113 C 1365.783906766807,102.57205792197482 1423.0811162190878,75.59201654913565 1445,79 C 1466.9188837809122,82.40798345086435 1453.4594418904562,116.20399172543218 1440,150 L 1440,400 L 0,400 Z");
-            }
-            75%{
-              d: path("M 0,400 L 0,150 C 30.42730095027261,173.9494394799248 60.85460190054522,197.89887895984958 98,176 C 135.14539809945478,154.10112104015042 179.0088933480918,86.3539236405264 215,103 C 250.9911066519082,119.6460763594736 279.10982470708774,220.68542647804475 316,222 C 352.89017529291226,223.31457352195525 398.5518078235572,124.90437044729458 435,86 C 471.4481921764428,47.09562955270541 498.6829439986832,67.69709173277685 533,79 C 567.3170560013168,90.30290826722315 608.7164161817101,92.30726262159797 647,117 C 685.2835838182899,141.69273737840203 720.4513912744762,189.07385778083133 759,215 C 797.5486087255238,240.92614221916867 839.4780187203852,245.3973062550767 877,212 C 914.5219812796148,178.6026937449233 947.6365338439829,107.33691719886177 985,104 C 1022.3634661560171,100.66308280113823 1063.975845903684,165.25502494947625 1101,198 C 1138.024154096316,230.74497505052375 1170.4600825412804,231.64298300323318 1205,197 C 1239.5399174587196,162.35701699676682 1276.1838239311935,92.17304303759107 1316,80 C 1355.8161760688065,67.82695696240893 1398.8046217339447,113.66484484640256 1420,135 C 1441.1953782660553,156.33515515359744 1440.5976891330276,153.16757757679872 1440,150 L 1440,400 L 0,400 Z");
-            }
-            100%{
-              d: path("M 0,400 L 0,150 C 30.54251140301237,168.36278496629686 61.08502280602474,186.72556993259371 102,209 C 142.91497719397526,231.27443006740629 194.20242017891343,257.460505235922 231,218 C 267.7975798210866,178.53949476407794 290.1052964783214,73.43240912371803 320,75 C 349.8947035216786,76.56759087628197 387.37639390780106,184.80985826920582 429,192 C 470.62360609219894,199.19014173079418 516.3891278904744,105.32815779945876 549,101 C 581.6108721095256,96.67184220054124 601.0670945303013,181.8775105329591 643,192 C 684.9329054696987,202.1224894670409 749.3424939883201,137.1618000687049 791,132 C 832.6575060116799,126.8381999312951 851.562929516418,181.47528919222128 878,177 C 904.437070483582,172.52471080777872 938.4057879460078,108.93704316240998 976,106 C 1013.5942120539922,103.06295683759002 1054.8139186995504,160.77653815813878 1092,161 C 1129.1860813004496,161.22346184186122 1162.3385372557905,103.95680420503497 1204,100 C 1245.6614627442095,96.04319579496503 1295.8319322772873,145.39624502172134 1339,150 C 1382.1680677227127,154.60375497827866 1418.3337336350608,114.45821570807962 1434,107 C 1449.6662663649392,99.54178429192038 1444.8331331824697,124.77089214596019 1440,150 L 1440,400 L 0,400 Z");
-            }
-          }</style><path d="M 0,400 L 0,150 C 30.54251140301237,168.36278496629686 61.08502280602474,186.72556993259371 102,209 C 142.91497719397526,231.27443006740629 194.20242017891343,257.460505235922 231,218 C 267.7975798210866,178.53949476407794 290.1052964783214,73.43240912371803 320,75 C 349.8947035216786,76.56759087628197 387.37639390780106,184.80985826920582 429,192 C 470.62360609219894,199.19014173079418 516.3891278904744,105.32815779945876 549,101 C 581.6108721095256,96.67184220054124 601.0670945303013,181.8775105329591 643,192 C 684.9329054696987,202.1224894670409 749.3424939883201,137.1618000687049 791,132 C 832.6575060116799,126.8381999312951 851.562929516418,181.47528919222128 878,177 C 904.437070483582,172.52471080777872 938.4057879460078,108.93704316240998 976,106 C 1013.5942120539922,103.06295683759002 1054.8139186995504,160.77653815813878 1092,161 C 1129.1860813004496,161.22346184186122 1162.3385372557905,103.95680420503497 1204,100 C 1245.6614627442095,96.04319579496503 1295.8319322772873,145.39624502172134 1339,150 C 1382.1680677227127,154.60375497827866 1418.3337336350608,114.45821570807962 1434,107 C 1449.6662663649392,99.54178429192038 1444.8331331824697,124.77089214596019 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#00008b" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
-
-<br>
-</div>
-</center>
-<section class="bg-white dark:bg-gray-900">
-    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img alt="Weply Studio" src="https://html.designingmedia.com/Hostiko/Item-WP-14/assets/images/hero_banner_img.svg" alt="Weply Studio" alt="dashboard image">
-        <div class="mt-4 md:mt-0">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white" style="color:black">Ayo buat website anda sekarang dengan weply!</h2>
-            <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Weply membantu anda dalam pembuatan website dengan cepat, kami juga menggunakan server berperforma tinggi dari litespeed yang menciptakan layanan website hosting terbaik di indonesia!</p>
-            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-300 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full texstyle="max-width"max-width:50%">
-                Get started
-                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- End fourth page -->
-<footer class="bg-white dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-              <a href="https://flowbite.com/" class="flex items-center">
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" style="color:black">Weply Digital Solution</span>
-              </a>
-                <span class="text-1xl font-semibold">Platfrom Solusi Bisnis Digital No.1</span>
-          </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white" style="color:black">Tentang Kami</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline">Weply</a>
+<section class="py-16 bg-gray-900 text-gray-100">
+  <div class="max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl sm:text-5xl font-extrabold mb-8 text-white fade-section">Cloud Hosting</h2>
+      <p class="mb-12 text-gray-300 text-lg fade-section">Choose the perfect plan to bring your creative projects to life with seamless features and unmatched support.</p>
+      <!-- Toggle -->
+      <div class="flex justify-center items-center mb-8">
+          <span class="text-gray-300 text-lg mr-4 fade-section">Monthly</span>
+          <label class="relative inline-flex items-center cursor-pointer fade-section">
+              <input type="checkbox" id="togglePricing" class="sr-only">
+              <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
+              <div class="w-5 h-5 bg-white rounded-full shadow absolute top-[2px] left-[2px] peer-checked:translate-x-5 transition-transform"></div>
+          </label>
+          <span class="text-gray-300 text-lg ml-4 fade-section">Yearly</span>
+      </div>
+      <!-- Pricing Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 fade-section">
+          <!-- Starter Plan -->
+          <div class="relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <div class="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+              <div class="p-8">
+                  <h3 class="text-2xl font-semibold text-white mb-4 fade-section">Starter</h3>
+                  <p class="text-gray-400 mb-6 fade-section">Great for small creative projects and personal ideas.</p>
+                  <div class="text-5xl font-extrabold text-white mb-4 flex justify-center">
+                      <span class="text-3xl font-semibold align-text-top m-0 fade-section">Rp</span><span class="price fade-section">75.000</span>
+                  </div>
+                  <ul class="space-y-3 text-gray-300 mb-8">
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-blue-500 mr-3 fade-section"></i> 1 vCPU
                       </li>
-                      <li>
-                          <a href="#" class="hover:underline">Website Hosting</a>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-blue-500 mr-3 fade-section"></i> 1GB Ram
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-blue-500 mr-3 fade-section"></i> 10GB NVME Storage
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-blue-500 mr-3 fade-section"></i> Dedicated Resource
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-blue-500 mr-3 fade-section"></i> Unlimited Bandwidth
                       </li>
                   </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white" style="color:black">Follow us</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="https://instagram.com/jensestudio" class="hover:underline ">Instagram</a>
-                      </li>
-                      <li>
-                          <a href="https://instagram.com/quote_jaa" class="hover:underline">Instagram #2</a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white" style="color:black">Legal</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline">Privacy Policy</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                      </li>
-                  </ul>
+                  <a href="https://wa.me/6285868055463?text=hai weply studio saya ingin membeli cloud hosting starter" class="block w-full bg-blue-500 text-white font-bold py-3 rounded-lg text-center hover:bg-blue-700 transition-colors duration-300 fade-section">
+                      Get Started
+                  </a>
               </div>
           </div>
-      </div><br>
-      <center><footer style="font-size:15px;color:#00008B">Harga belum termasuk pajak 10%!</footer></center>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Weply Digital Solution™</a>. All Rights Reserved.
-          </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
-                    </svg>
-                  <span class="sr-only">Facebook page</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                    </svg>
-                  <span class="sr-only">Discord community</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                </svg>
-                  <span class="sr-only">Twitter page</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="sr-only">GitHub account</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
-                </svg>
-                  <span class="sr-only">Dribbble account</span>
-              </a>
+          <!-- Pro Plan -->
+          <div class="relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 fade-section">
+              <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 fade-section"></div>
+              <div class="p-8 fade-section">
+                  <h3 class="text-2xl font-semibold text-white mb-4 fade-section">Pro</h3>
+                  <p class="text-gray-400 mb-6 fade-section">Perfect for growing creative projects and teams.</p>
+                  <div class="text-5xl font-extrabold text-white mb-4 flex justify-center fade-section">
+                      <span class="text-3xl font-semibold align-text-top m-0 fade-section">Rp</span><span class="price fade-section">225.000</span>
+                  </div>
+                  <ul class="space-y-3 text-gray-300 mb-8 fade-section">
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-purple-500 mr-3 fade-section"></i> 2 vCPU
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-purple-500 mr-3 fade-section"></i> 3GB Ram
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-purple-500 mr-3 fade-section"></i> 30GB NVME Storage
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-purple-500 mr-3 fade-section"></i> Dedicated Resource
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-purple-500 mr-3 fade-section"></i> Unlimited Bandwidth
+                      </li>
+                  </ul>
+                  <a href="https://wa.me/6285868055463?text=hai weply studio saya ingin membeli cloud hosting pro" class="block w-full bg-purple-500 text-white font-bold py-3 rounded-lg text-center hover:bg-purple-700 transition-colors duration-300 fade-section">
+                      Get Started
+                  </a>
+              </div>
+          </div>
+          <!-- Advanced Plan -->
+          <div class="relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 fade-section">
+              <div class="absolute top-0 left-0 w-full h-1 bg-red-500 fade-section"></div>
+              <div class="p-8 fade-section">
+                  <h3 class="text-2xl font-semibold text-white mb-4 fade-section">Advanced</h3>
+                  <p class="text-gray-400 mb-6 fade-section">Ultimate tools for large-scale and professional creative projects.</p>
+                  <div class="text-5xl font-extrabold text-white mb-4 flex justify-center fade-section">
+                      <span class="text-3xl font-semibold align-text-top m-0 fade-section">Rp</span><span class="price fade-section">475.000</span>
+                  </div>
+                  <ul class="space-y-3 text-gray-300 mb-8 fade-section">
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-red-500 mr-3 fade-section"></i> 4 vCPU
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-red-500 mr-3 fade-section"></i> 6GB Ram
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-red-500 mr-3 fade-section"></i> 60GB NVME Storage
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-red-500 mr-3 fade-section"></i> Dedicated Resource
+                      </li>
+                      <li class="flex items-center fade-section">
+                          <i class="fa fa-check-circle text-red-500 mr-3 fade-section"></i> Unlimited Bandwidth
+                      </li>
+                  </ul>
+                  <a href="https://wa.me/6285868055463?text=hai weply studio saya ingin membeli cloud hosting advanced" class="block w-full bg-red-500 text-white font-bold py-3 rounded-lg text-center hover:bg-red-700 transition-colors duration-300 fade-section">
+                      Get Started
+                  </a>
+              </div>
           </div>
       </div>
+  </div>
+</section>
+
+
+<section class="bg-white pl-4 pr-4 pt-14 pb-14 rounded-t-3xl shadow-lg fade-section">
+  <div class="w-14 h-14 bg-gray-900 flex items-center justify-center rounded-full mb-5 p-4 fade-section">
+      <i class="text-white fade-section">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" d="M3 13.111C3 20.222 8.289 22 10.933 22c1.354 0 3.315-.357 5.067-1.39M18.72 18c.782-1.246 1.28-2.848 1.28-4.889c0-4.527-2.835-7.76-5.398-9.613C13.444 2.66 12 3.58 12 5.01v.323c0 1.442-.606 4.074-2.29 5.169c-.86.559-1.79-.278-1.894-1.298l-.086-.838c-.1-.974-1.092-1.565-1.87-.971A7.5 7.5 0 0 0 3.97 9.5"/>
+                  <path d="M8 18.445C8 21.289 10.489 22 11.733 22c1.09 0 3.267-.711 3.267-3.555c0-1.102-.59-1.845-1.16-2.274c-.398-.299-.957-.03-1.094.449c-.178.624-.823 1.016-1.152.456c-.3-.512-.3-1.28-.3-1.743c0-.636-.64-1.048-1.155-.674C9.106 15.409 8 16.68 8 18.445Z"/>
+              </g>
+          </svg>
+      </i>
+  </div>
+  <p class="text-3xl text-gray-900 font-extrabold mt-0 fade-section">Creative Solutions, Redefined</p>
+
+  <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1: Creative Strategies -->
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 fade-section">
+          <div class="w-16 h-16 bg-white flex items-center justify-center rounded-lg mb-4 fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M10 19.5h4M10.667 22h2.666M15 2.602A7.7 7.7 0 0 0 12 2C8.134 2 5 4.807 5 8.218v.084c.009 1.996.87 3.917 2.41 5.379l1.105 1.039c.31.291.485.698.485 1.123C9 16.482 9.518 17 10.157 17h3.686c.639 0 1.157-.518 1.157-1.157c0-.425.176-.832.485-1.123l1.104-1.04c1.542-1.461 2.402-3.382 2.41-5.378L19 8.218c0-.78-.164-1.528-.462-2.218"/></svg>
+          </div>
+          <p class="text-xl text-white font-semibold fade-section">Creative Strategies</p>
+          <p class="mt-2 text-gray-300 fade-section">Transform your ideas into impactful solutions with our unique approach.</p>
+      </div>
+      <!-- Card 2: 24/7 Support -->
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 fade-section">
+          <div class="w-16 h-16 bg-white flex items-center justify-center rounded-lg mb-4 fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 3.681a7.26 7.26 0 0 0-7.258 7.259v1.742a.87.87 0 0 1-1.742 0V10.94a9 9 0 0 1 18 0v4.645a4.355 4.355 0 0 1-4.355 4.354h-2.633c-.402.521-1.152.872-2.012.872c-1.283 0-2.323-.78-2.323-1.742s1.04-1.742 2.323-1.742c.86 0 1.61.35 2.012.87h2.633a2.613 2.613 0 0 0 2.613-2.612V10.94A7.26 7.26 0 0 0 12 3.68M7.935 9.778a2.323 2.323 0 0 0-2.322 2.323v1.742a2.323 2.323 0 0 0 2.322 2.322h.581c.641 0 1.161-.52 1.161-1.161V10.94c0-.642-.52-1.162-1.16-1.162zm8.13 0a2.323 2.323 0 0 1 2.322 2.323v1.742a2.323 2.323 0 0 1-2.323 2.322h-.58a1.16 1.16 0 0 1-1.161-1.161V10.94c0-.642.52-1.162 1.16-1.162z" clip-rule="evenodd"/></svg>
+          </div>
+          <p class="text-xl text-white font-semibold fade-section">24/7 Support</p>
+          <p class="mt-2 text-gray-300 fade-section">We’re here for you anytime, delivering solutions when you need them the most.</p>
+      </div>
+      <!-- Card 3: Unlimited Innovation -->
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 fade-section">
+          <div class="w-16 h-16 bg-white flex items-center justify-center rounded-lg mb-4 fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M10 8a5 5 0 0 0-6 8m10 0a5 5 0 0 0 6-8M7 17c2.761 0 3.5-2 5-5s2.239-5 5-5"/></svg>
+          </div>
+          <p class="text-xl text-white font-semibold fade-section">Unlimited Innovation</p>
+          <p class="mt-2 text-gray-300 fade-section">Push the boundaries of creativity with groundbreaking solutions.</p>
+      </div>
+  </div>
+</section>
+
+<section class="bg-gray-900 text-white py-16">
+  <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6 fade-section">Frequently Asked Questions</h2>
+      <p class="text-lg mb-12 fade-section">Got ideas? We have creative solutions to bring them to life!</p>
+
+      <div class="space-y-6">
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md m-5">
+              <button class="w-full text-left text-xl font-medium focus:outline-none flex justify-between items-center fade-section" data-toggle="faq1">
+                  <span>What is Weply Studio?</span>
+                  <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="faq1" class="mt-4 text-gray-300 hidden fade-section">
+                  <p>Weply Studio is your creative partner for delivering innovative design, development, and digital strategies to make your ideas shine.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md m-5">
+              <button class="w-full text-left text-xl font-medium focus:outline-none flex justify-between items-center fade-section" data-toggle="faq2">
+                  <span>Where are our services available?</span>
+                  <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="faq2" class="mt-4 text-gray-300 hidden fade-section">
+                  <p>Our reach is global! With data centers in London, the US, Singapore, Indonesia, the Netherlands, and Germany, we ensure worldwide coverage for your creative solutions.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md m-5">
+              <button class="w-full text-left text-xl font-medium focus:outline-none flex justify-between items-center fade-section" data-toggle="faq3">
+                  <span>Do we offer guarantees?</span>
+                  <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="faq3" class="mt-4 text-gray-300 hidden fade-section">
+                  <p>Absolutely! We stand behind our work with a 100% money-back guarantee within the first 30 days.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md m-5">
+              <button class="w-full text-left text-xl font-medium focus:outline-none flex justify-between items-center fade-section" data-toggle="faq4">
+                  <span>Can I migrate to Weply Studio?</span>
+                  <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="faq4" class="mt-4 text-gray-300 hidden fade-section">
+                  <p>Yes! We make it simple to transition to Weply Studio so you can focus on your creative ideas without hassle.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md m-5">
+              <button class="w-full text-left text-xl font-medium focus:outline-none flex justify-between items-center fade-section" data-toggle="faq5">
+                  <span>Do we accept international payments?</span>
+                  <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="faq5" class="mt-4 text-gray-300 hidden fade-section">
+                  <p>Yes, we support a variety of international payment methods, including PayPal, Visa, and Mastercard, to serve clients worldwide.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md m-5">
+              <button class="w-full text-left text-xl font-medium focus:outline-none flex justify-between items-center fade-section" data-toggle="faq6">
+                  <span>Is our service reliable?</span>
+                  <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="faq6" class="mt-4 text-gray-300 hidden fade-section">
+                  <p>Absolutely! We have supported over 10,000 clients across various industries and earned the trust of hundreds of companies worldwide to bring their creative visions to life.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="bg-white py-16 rounded-b-3xl">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-gray-800 fade-section">Why Choose Us?</h2>
+      <p class="mt-4 text-gray-600 fade-section">Explore how our creative solutions can elevate your brand.</p>
     </div>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Feature 1 -->
+      <div class="flex flex-col items-center text-center">
+        <div class="p-4 bg-gray-100 rounded-full fade-section">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 17v-2m1.732-1a2 2 0 0 1-3.464 0"/><path d="M14.5 19.5h-5m5 0c0-.713 0-1.07.038-1.307c.123-.763.144-.812.631-1.412c.151-.186.711-.688 1.832-1.692A7.48 7.48 0 0 0 19.5 9.5a7.5 7.5 0 0 0-.427-2.5M14.5 19.5c0 .935 0 1.402-.201 1.75a1.5 1.5 0 0 1-.549.549C13.402 22 12.935 22 12 22s-1.402 0-1.75-.201a1.5 1.5 0 0 1-.549-.549c-.201-.348-.201-.815-.201-1.75m0 0c0-.713 0-1.07-.038-1.307c-.123-.763-.144-.812-.631-1.412c-.151-.186-.712-.688-1.832-1.692A7.5 7.5 0 0 1 15.744 3"/></g></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-medium text-gray-800 fade-section">Innovative Ideas</h3>
+        <p class="mt-2 text-gray-600 fade-section">Empowering your brand with groundbreaking creative solutions.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="flex flex-col items-center text-center">
+        <div class="p-4 bg-gray-100 rounded-full fade-section">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 3.681a7.26 7.26 0 0 0-7.258 7.259v1.742a.87.87 0 0 1-1.742 0V10.94a9 9 0 0 1 18 0v4.645a4.355 4.355 0 0 1-4.355 4.354h-2.633c-.402.521-1.152.872-2.012.872c-1.283 0-2.323-.78-2.323-1.742s1.04-1.742 2.323-1.742c.86 0 1.61.35 2.012.87h2.633a2.613 2.613 0 0 0 2.613-2.612V10.94A7.26 7.26 0 0 0 12 3.68M7.935 9.778a2.323 2.323 0 0 0-2.322 2.323v1.742a2.323 2.323 0 0 0 2.322 2.322h.581c.641 0 1.161-.52 1.161-1.161V10.94c0-.642-.52-1.162-1.16-1.162zm8.13 0a2.323 2.323 0 0 1 2.322 2.323v1.742a2.323 2.323 0 0 1-2.323 2.322h-.58a1.16 1.16 0 0 1-1.161-1.161V10.94c0-.642.52-1.162 1.16-1.162z" clip-rule="evenodd"/></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-medium text-gray-800 fade-section">Personalized Support</h3>
+        <p class="mt-2 text-gray-600 fade-section">Dedicated experts ensuring your vision comes to life seamlessly.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="flex flex-col items-center text-center">
+        <div class="p-4 bg-gray-100 rounded-full fade-section">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="m9.5 12.4l1.429 1.6l3.571-4"/><path d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 2.505-.837 4.437-2 5.913M3.193 14c.857 4.298 4.383 6.513 6.706 7.527c.721.315 1.082.473 2.101.473c1.02 0 1.38-.158 2.101-.473c.579-.252 1.231-.58 1.899-.994"/></g></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-medium text-gray-800 fade-section">Creative Security</h3>
+        <p class="mt-2 text-gray-600 fade-section">Ensuring your projects stay secure while you innovate fearlessly.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="flex flex-col items-center text-center">
+        <div class="p-4 bg-gray-100 rounded-full fade-section">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M22 22H2"/><path d="M21 22v-7.5a1.5 1.5 0 0 0-1.5-1.5h-3a1.5 1.5 0 0 0-1.5 1.5V22"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 22V9M9 22V5c0-1.414 0-2.121.44-2.56C9.878 2 10.585 2 12 2s2.121 0 2.56.44C15 2.878 15 3.585 15 5v0"/><path stroke-linecap="round" d="M9 22V9.5A1.5 1.5 0 0 0 7.5 8h-3A1.5 1.5 0 0 0 3 9.5V16m0 6v-2.25"/></g></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-medium text-gray-800 fade-section">Flexible Solutions</h3>
+        <p class="mt-2 text-gray-600 fade-section">Adapting to your needs with scalable and customizable options.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-gray-900 py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="text-center">
+      <p class="text-sm font-semibold text-gray-400 uppercase fade-section">C R E A T I V E</p>
+      <h2 class="mt-2 text-3xl font-bold text-white fade-section">Innovative Solutions for Creative Challenges</h2>
+    </div>
+
+    <!-- Features -->
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <div class="p-3 bg-gray-800 text-blue-400 rounded-full fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="6" r="4"/><path stroke-linecap="round" d="M15 20.615c-.91.247-1.926.385-3 .385c-3.866 0-7-1.79-7-4s3.134-4 7-4s7 1.79 7 4c0 .345-.077.68-.22 1"/></g></svg>
+          </div>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-medium text-white fade-section">24/7 Creative Support</h3>
+          <p class="mt-2 text-gray-400 fade-section">Our team is available anytime to assist you in bringing your ideas to life.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <div class="p-3 bg-gray-800 text-yellow-400 rounded-full fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="2"/><path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"/><path stroke-linecap="round" d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 2.505-.837 4.437-2 5.913M3.193 14c.857 4.298 4.383 6.513 6.706 7.527c.721.315 1.082.473 2.101.473c1.02 0 1.38-.158 2.101-.473c.579-.252 1.231-.58 1.899-.994"/></g></svg>
+          </div>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-medium text-white fade-section">Creative Experts</h3>
+          <p class="mt-2 text-gray-400 fade-section">Our team specializes in providing innovative solutions to complex challenges.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <div class="p-3 bg-gray-800 text-green-400 rounded-full fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M12 8v4l2.5 2.5"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg>
+          </div>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-medium text-white fade-section">Fast Project Delivery</h3>
+          <p class="mt-2 text-gray-400 fade-section">We ensure your creative projects are completed promptly without compromising quality.</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <div class="p-3 bg-gray-800 text-purple-400 rounded-full fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M10 22c-2.828 0-4.243 0-5.121-.879C4 20.243 4 18.828 4 16V8c0-2.828 0-4.243.879-5.121C5.757 2 7.172 2 10 2h4c2.828 0 4.243 0 5.121.879C20 3.757 20 5.172 20 8m-6 14c2.828 0 4.243 0 5.121-.879C20 20.243 20 18.828 20 16v-4"/><path d="M19.898 16h-12c-.93 0-1.395 0-1.777.102A3 3 0 0 0 4 18.224"/><path stroke-linecap="round" d="M7 16V9m0-6.5V5m6 11v3.53c0 .276 0 .414-.095.47s-.224-.006-.484-.13l-1.242-.59c-.088-.04-.132-.062-.179-.062s-.091.021-.179.063l-1.242.59c-.26.123-.39.185-.484.129C9 19.944 9 19.806 9 19.53v-3.08"/></g></svg>
+          </div>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-medium text-white fade-section">Detailed Documentation</h3>
+          <p class="mt-2 text-gray-400 fade-section">Access comprehensive guides to make the most of our creative services.</p>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <div class="p-3 bg-gray-800 text-red-400 rounded-full fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M18 10a1 1 0 0 0-1-1H5.41l2.3-2.29a1 1 0 0 0-1.42-1.42l-4 4a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 11h14a1 1 0 0 0 1-1m3.92 3.62A1 1 0 0 0 21 13H7a1 1 0 0 0 0 2h11.59l-2.3 2.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l4-4a1 1 0 0 0 .21-1.09"/></svg>
+          </div>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-medium text-white fade-section">Seamless Collaboration</h3>
+          <p class="mt-2 text-gray-400 fade-section">Partner with us for smooth and successful creative endeavors.</p>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <div class="p-3 bg-gray-800 text-cyan-400 rounded-full fade-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 13.5v3m1.5-3.402a3 3 0 1 1-3-5.195a3 3 0 0 1 3 5.195Z"/><path d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 2.505-.837 4.437-2 5.913M3.193 14c.857 4.298 4.383 6.513 6.706 7.527c.721.315 1.082.473 2.101.473c1.02 0 1.38-.158 2.101-.473c.579-.252 1.231-.58 1.899-.994"/></g></svg>
+          </div>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-medium text-white fade-section">Innovative Solutions</h3>
+          <p class="mt-2 text-gray-400 fade-section">Utilize cutting-edge technologies and ideas to transform your vision into reality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-white text-gray-900 py-3 sm:py-3 lg:py-3 pb-0 rounded-b-3xl">
+  <!-- Brand Section -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <h1 class="mt-5 sm:mt-5 lg:mt-5 text-4xl font-extrabold tracking-tight text-gray-900 mb-2 fade-section">
+      Weply Studio
+    </h1>
+    <p class="text-lg text-gray-600 max-w-md mx-auto fade-section">
+      Your trusted partner for creative digital solutions that drive success.
+    </p>
+  </div>
+
+  <!-- Footer Main Content -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- About Us Section -->
+    <div class="space-y-4">
+      <h3 class="text-xl font-semibold text-gray-800 fade-section">About Us</h3>
+      <p class="text-sm text-gray-600 fade-section">
+        We specialize in delivering innovative web designs and digital solutions, empowering brands to stand out and thrive online.
+      </p>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="space-y-4">
+      <h3 class="text-xl font-semibold text-gray-800 fade-section">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-600 fade-section">
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">Services</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">Portfolio</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services Section -->
+    <div class="space-y-4">
+      <h3 class="text-xl font-semibold text-gray-800 fade-section">Our Services</h3>
+      <ul class="space-y-2 text-sm text-gray-600 fade-section">
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">Web Design</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">Web Development</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">Cloud Hosting</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition fade-section">SEO Optimization</a></li>
+      </ul>
+    </div>
+
+    <!-- Subscribe Section -->
+    <div class="space-y-4">
+      <h3 class="text-xl font-semibold text-gray-800 fade-section">Subscribe</h3>
+      <p class="text-sm text-gray-600 mb-4 fade-section">Stay updated with the latest creative insights and solutions.</p>
+      <form class="space-y-4 fade-section">
+        <input 
+          type="email" 
+          placeholder="Your email" 
+          class="w-full p-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 fade-section"
+        />
+        <button 
+          type="submit" 
+          class="w-full p-3 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition fade-section"
+        >
+          Subscribe Now
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Social Media & Footer Bottom -->
+  <div class="py-8 mt-16 border-t border-gray-200 rounded-b-3xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
+      <!-- Footer Copyright -->
+      <div class="pt-0 sm:mt-0 text-center text-sm text-gray-600">
+        <p>&copy; 2024 Weply Studio. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<!-- Mobile Sidebar -->
+<div id="sidebar" class="fixed inset-y-0 right-0 z-10 w-full max-w-sm bg-white px-6 py-6 shadow-lg transform translate-x-full transition-transform duration-300">
+  <div class="flex items-center justify-between">
+    <h3 class="text-2xl text-gray-700 font-bold">Weply Studio</h3>
+    <!-- Close Button -->
+    <button id="closeSidebar" type="button" class="rounded-md p-2.5 text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m14.5 9.5l-5 5m0-5l5 5M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"/></svg>
+    </button>
+  </div>
+  <div class="mt-6 space-y-4">
+    <a href="#" class="block text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2">Features</a>
+    <a href="#" class="block text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2">Marketplace</a>
+    <div class="relative group">
+      <!-- Dropdown Trigger -->
+      <button class="block w-full text-left text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2 focus:outline-none" id="dropdownButton">
+        Services
+        <svg class="inline h-5 w-5 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <!-- Dropdown Menu -->
+      <div id="dropdownMenu" class="hidden mt-2 space-y-2 bg-gray-50 border border-gray-200 shadow-lg absolute right-0 w-full group-hover:block">
+        <a href="./web-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Hosting</a>
+        <a href="./cloud-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cloud Hosting</a>
+        <a href="./vps-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">VPS Hosting</a>
+        <a href="./logo" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logo Design</a>
+        <a href="./wa-api" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">WhatsApp API</a>
+        <a href="./web-ai" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">AI Web Generated</a>
+      </div>
+    </div>
+    <a href="#" class="block text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2">Company</a>
+    <hr>
+    <a href="#" class="block text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2">Log in <i class="fa fa-arrow-right fa-sm ml-3"></i></a>
+  </div>
 </div>
 </body>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/preflight.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/utilities.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<script>
-  function visitCloudBasic() {
-        window.location.href = "/cart/index.html?item=Cloud+Hosting+Basic+(1 Bln)&harga=80.000"
-        };
-function visitCloudStandart() {
-        window.location.href = "/cart/index.html?item=Cloud+Hosting+Standart+(1 Bln)&harga=230.000"
-        };
-function visitCloudSuper() {
-        window.location.href = "/cart/index.html?item=Cloud+Hosting+Super+(1 Bln)&harga=485.000"
-        };
-</script>
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(function(registration) {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        })
-        .catch(function(error) {
-          console.log('ServiceWorker registration failed: ', error);
+<script src="https://kit.fontawesome.com/73e99931c3.js" crossorigin="anonymous"></script>
+    <script>
+    const togglePricing = document.getElementById('togglePricing');
+    const prices = document.querySelectorAll('.price');
+
+    const monthlyPrices = [75000, 225000, 475000];
+    const yearlyPrices = [680000, 2120000, 4520000];
+
+    togglePricing.addEventListener('change', () => {
+        const isYearly = togglePricing.checked;
+        prices.forEach((price, index) => {
+            price.textContent = isYearly ? yearlyPrices[index].toLocaleString() : monthlyPrices[index].toLocaleString();
         });
+    });
+
+  const dropdownButton = document.getElementById('dropdownButton');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', (e) => {
+    if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.add('hidden');
     }
-  </script>
+  });
+  
+  document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.fade-section');
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                
+                if (rect.top <= windowHeight && rect.bottom >= 0) {
+                    section.classList.add('visible');  // Fade in
+                } else {
+                    section.classList.remove('visible');  // Fade out
+                }
+            });
+        });
+        
+        const sidebar = document.getElementById('sidebar');
+  const openSidebar = document.getElementById('openSidebar');
+  const closeSidebar = document.getElementById('closeSidebar');
+
+  // Open sidebar
+  openSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('translate-x-full');
+    sidebar.classList.add('translate-x-0');
+  });
+
+  // Close sidebar
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('translate-x-0');
+    sidebar.classList.add('translate-x-full');
+  });
+  
+    // JavaScript to toggle FAQ answers
+    const faqs = document.querySelectorAll('[data-toggle]');
+    faqs.forEach(faq => {
+        faq.addEventListener('click', () => {
+            const target = document.getElementById(faq.dataset.toggle);
+            target.classList.toggle('hidden');
+            faq.querySelector('i').classList.toggle('fa-chevron-down');
+            faq.querySelector('i').classList.toggle('fa-chevron-up');
+        });
+    });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
