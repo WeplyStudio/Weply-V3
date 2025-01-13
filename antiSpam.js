@@ -1,44 +1,40 @@
-// Konfigurasi
-const maxTransitions = 5; // Maksimal perpindahan halaman
-const timeWindow = 10000; // Waktu untuk reset (10 detik)
-const blockDuration = 30 * 60 * 1000; // Durasi blokir (30 menit)
+console.log("Anti-spam script aktif");
 
-// Fungsi untuk mengecek apakah user diblokir
-function checkBlockStatus() {
-    const blockTime = localStorage.getItem('blockTime');
-    if (blockTime) {
-        const now = Date.now();
-        if (now < parseInt(blockTime)) {
-            // Jika masih dalam masa blokir, alihkan ke block.html
-            window.location.href = '/block';
-        } else {
-            // Jika masa blokir selesai, hapus data blokir
-            localStorage.removeItem('blockTime');
-        }
-    }
-}
-
-// Fungsi untuk memblokir user
-function blockUser() {
-    const blockUntil = Date.now() + blockDuration;
-    localStorage.setItem('blockTime', blockUntil);
-    window.location.href = '/block'; // Alihkan ke block.html
-}
-
-// Mengecek status blokir setiap kali halaman dimuat
-checkBlockStatus();
-
-// Pemantauan aktivitas user
+// Inisialisasi variabel
 let transitionTimes = [];
-document.addEventListener('DOMContentLoaded', () => {
-    const now = Date.now();
-    transitionTimes.push(now);
+const maxTransitions = 5; // Jumlah maksimal perpindahan halaman dalam 1 detik
+const blockDuration = 30 * 60 * 1000; // Durasi blokir dalam milidetik (30 menit)
 
-    // Hapus data yang lebih lama dari timeWindow
-    transitionTimes = transitionTimes.filter(time => now - time < timeWindow);
+// Fungsi untuk memeriksa aktivitas mencurigakan
+function checkSuspiciousActivity() {
+  console.log("Memeriksa aktivitas mencurigakan...");
+  const now = Date.now();
+  transitionTimes.push(now);
 
-    // Jika jumlah perpindahan halaman melebihi batas, blokir user
-    if (transitionTimes.length > maxTransitions) {
-        blockUser();
-    }
+  // Hapus data lama yang tidak relevan
+  transitionTimes = transitionTimes.filter(time => now - time <= 1000);
+
+  console.log("Transition times (jumlah):", transitionTimes.length);
+
+  // Jika jumlah perpindahan halaman melebihi batas
+  if (transitionTimes.length > maxTransitions) {
+    console.log("User terdeteksi mencurigakan!");
+    alert("Anda diblokir selama 30 menit karena aktivitas mencurigakan!");
+    localStorage.setItem("blockedUntil", now + blockDuration);
+  }
+}
+
+// Periksa apakah user sedang diblokir
+const blockedUntil = localStorage.getItem("blockedUntil");
+if (blockedUntil && Date.now() < blockedUntil) {
+  console.log("User sedang diblokir hingga:", new Date(parseInt(blockedUntil)));
+  alert("Anda sedang diblokir hingga " + new Date(parseInt(blockedUntil)).toLocaleString());
+} else {
+  localStorage.removeItem("blockedUntil");
+}
+
+// Deteksi aktivitas mencurigakan setiap kali halaman dimuat
+window.addEventListener("load", () => {
+  console.log("Halaman dimuat. Memeriksa aktivitas mencurigakan...");
+  checkSuspiciousActivity();
 });
