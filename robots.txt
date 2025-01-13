@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /cart
 Allow: /
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://www.weplystudio.my.id/sitemap.xml
