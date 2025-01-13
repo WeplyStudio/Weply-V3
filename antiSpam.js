@@ -10,7 +10,7 @@ function checkBlockStatus() {
         const now = Date.now();
         if (now < parseInt(blockTime)) {
             // Jika masih dalam masa blokir, alihkan ke block.html
-            window.location.href = 'block.html';
+            window.location.href = '/block';
         } else {
             // Jika masa blokir selesai, hapus data blokir
             localStorage.removeItem('blockTime');
@@ -22,7 +22,7 @@ function checkBlockStatus() {
 function blockUser() {
     const blockUntil = Date.now() + blockDuration;
     localStorage.setItem('blockTime', blockUntil);
-    window.location.href = 'block.html'; // Alihkan ke block.html
+    window.location.href = '/block'; // Alihkan ke block.html
 }
 
 // Mengecek status blokir setiap kali halaman dimuat
