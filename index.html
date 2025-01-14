@@ -671,7 +671,6 @@
     <a href="#" class="block text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2">Log in <i class="fa fa-arrow-right fa-sm ml-3"></i></a>
   </div>
 </div>
-<script src="antiSpam.js"></script>
 </body>
 </html>
 <script src="https://kit.fontawesome.com/73e99931c3.js" crossorigin="anonymous"></script>
@@ -790,3 +789,17 @@ label.relative.inline-flex input[type="checkbox"]:checked ~ div:last-child {
     });
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+<script>
+  function checkConnection() {
+    if (!navigator.onLine) {
+        // Redirect ke offline.html
+        window.location.href = "offline.html";
+    }
+}
+
+// Event listener untuk mendeteksi perubahan status online/offline
+window.addEventListener('offline', checkConnection);
+
+// Cek status koneksi saat halaman pertama kali dimuat
+checkConnection();
+</script>
