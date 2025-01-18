@@ -7,8 +7,8 @@ self.addEventListener('install', function(event) {
         '/style.css',
         '/script.js',
         '/vercel.json',
-        '192.png',
-        '512.png'
+        'favicon.ico',
+        'faavicon.ico'
       ]);
     })
   );
