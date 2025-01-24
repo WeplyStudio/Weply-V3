@@ -1,5 +1,10 @@
 User-agent: *
-Disallow: /cart
 Allow: /
-
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Mediapartners-Google
+Allow: /
 Sitemap: https://www.weplystudio.my.id/sitemap.xml
