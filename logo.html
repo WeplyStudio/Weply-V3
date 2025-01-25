@@ -686,17 +686,45 @@ label.relative.inline-flex input[type="checkbox"]:checked ~ div:last-child {
     });
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
-<script>
-  function checkConnection() {
-    if (!navigator.onLine) {
-        // Redirect ke offline.html
-        window.location.href = "offline.html";
-    }
-}
+  <!-- Link SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Your website content goes here -->
 
-// Event listener untuk mendeteksi perubahan status online/offline
-window.addEventListener('offline', checkConnection);
+    <!-- Link SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.min.js"></script>
 
-// Cek status koneksi saat halaman pertama kali dimuat
-checkConnection();
-</script>
+    <script>
+        // Check if the user is offline
+        window.addEventListener('load', () => {
+            if (!navigator.onLine) {
+                // If offline, show SweetAlert
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Offline',
+                    text: 'You are currently offline. Please check your internet connection.',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+
+        // Listen for changes in network status
+        window.addEventListener('online', () => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Back Online!',
+                text: 'You are now back online.',
+                confirmButtonText: 'OK'
+            });
+        });
+
+        window.addEventListener('offline', () => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Offline',
+                text: 'You are currently offline. Please check your internet connection.',
+                confirmButtonText: 'OK'
+            });
+        });
+    </script>
