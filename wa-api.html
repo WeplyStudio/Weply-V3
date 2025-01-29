@@ -4,21 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weply Studio</title>
-    <meta name="description" content="Weply Studio adalah penyedia jasa desain web dan pengembangan kreatif profesional. Kami menghadirkan solusi inovatif untuk meningkatkan kehadiran digital bisnis Anda.">
-<meta name="keywords" content="jasa desain web, pengembangan kreatif, desain website profesional, web development, jasa hosting, pembuatan website modern, Weply Studio, desain web Indonesia">
-<meta name="author" content="Weply Studio">
-<meta name="robots" content="index, follow">
-<meta name="language" content="id">
-<meta property="og:title" content="Weply Studio - Jasa Desain Web & Pengembangan Kreatif Profesional">
-<meta property="og:description" content="Kami menyediakan jasa desain web modern dan pengembangan kreatif untuk mendukung bisnis Anda tumbuh secara digital. Hubungi Weply Studio sekarang!">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<!-- Link to manifest.json -->
-  <link rel="manifest" href="/manifest.json">
   <style>
     body {
        font-family: "Montserrat", sans-serif;
@@ -36,6 +26,52 @@
 
   console.log("Text copy-paste is disabled on this website.");
 </script>
+<script src="https://kit.fontawesome.com/73e99931c3.js" crossorigin="anonymous"></script>
+     <style>
+        .fade-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        label.relative.inline-flex {
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+label.relative.inline-flex input[type="checkbox"]:checked ~ div:first-child {
+  background-color: #3b82f6;
+  transition: background-color 0.3s ease-in-out;
+}
+
+label.relative.inline-flex div:last-child {
+  transition: transform 0.3s ease-in-out; 
+}
+
+label.relative.inline-flex input[type="checkbox"]:checked ~ div:last-child {
+  transform: translateX(24px);
+}
+.leFlipInTop span { animation-name: leFlipInTop }
+@keyframes leFlipInTop {
+    from {
+        transform: perspective(600px);
+        opacity: 0
+    }
+    30% {
+        transform: perspective(600px) rotateX(180deg);
+        transform-origin: 0 0;
+        animation-timing-function: ease-out;
+    }
+    to { transform: perspective(600px) }
+}
+
+    </style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
 </head>
 <body class="bg-gray-900">
 <header class="bg-white shadow rounded-b-3xl fixed shadow-2xl" style="z-index: 10; width: 100%">
@@ -63,7 +99,7 @@
           </svg>
         </button>
         <!-- Dropdown Items -->
- <div id="dropdownMenu" class="hidden mt-2 space-y-2 bg-gray-50 border border-gray-200 shadow-lg absolute right-0 w-100% group-hover:block">
+        <div id="dropdownMenu" class="hidden mt-2 space-y-2 bg-gray-50 border border-gray-200 shadow-lg absolute right-0 w-100% group-hover:block">
         <a href="./web-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Hosting</a>
         <a href="./cloud-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cloud Hosting</a>
         <a href="./vps-hosting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">VPS Hosting</a>
@@ -678,54 +714,8 @@
     <a href="#" class="block text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2">Log in <i class="fa fa-arrow-right fa-sm ml-3"></i></a>
   </div>
 </div>
-</body>
-</html>
-<script src="https://kit.fontawesome.com/73e99931c3.js" crossorigin="anonymous"></script>
-     <style>
-        .fade-section {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1.5s ease, transform 1.5s ease;
-        }
 
-        .fade-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        label.relative.inline-flex {
-  position: relative;
-  width: 60px;
-  height: 30px;
-}
-
-label.relative.inline-flex input[type="checkbox"]:checked ~ div:first-child {
-  background-color: #3b82f6;
-  transition: background-color 0.3s ease-in-out;
-}
-
-label.relative.inline-flex div:last-child {
-  transition: transform 0.3s ease-in-out; 
-}
-
-label.relative.inline-flex input[type="checkbox"]:checked ~ div:last-child {
-  transform: translateX(24px);
-}
-.leFlipInTop span { animation-name: leFlipInTop }
-@keyframes leFlipInTop {
-    from {
-        transform: perspective(600px);
-        opacity: 0
-    }
-    30% {
-        transform: perspective(600px) rotateX(180deg);
-        transform-origin: 0 0;
-        animation-timing-function: ease-out;
-    }
-    to { transform: perspective(600px) }
-}
-
-    </style>
-    <script>
+ <script>
     const togglePricing = document.getElementById('togglePricing');
     const prices = document.querySelectorAll('.price');
 
@@ -795,46 +785,5 @@ label.relative.inline-flex input[type="checkbox"]:checked ~ div:last-child {
         });
     });
 </script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
-  <!-- Link SweetAlert2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Your website content goes here -->
-
-    <!-- Link SweetAlert2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.min.js"></script>
-
-    <script>
-        // Check if the user is offline
-        window.addEventListener('load', () => {
-            if (!navigator.onLine) {
-                // If offline, show SweetAlert
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Offline',
-                    text: 'You are currently offline. Please check your internet connection.',
-                    confirmButtonText: 'OK'
-                });
-            }
-        });
-
-        // Listen for changes in network status
-        window.addEventListener('online', () => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Back Online!',
-                text: 'You are now back online.',
-                confirmButtonText: 'OK'
-            });
-        });
-
-        window.addEventListener('offline', () => {
-            Swal.fire({
-                icon: 'error',
-                title: 'Offline',
-                text: 'You are currently offline. Please check your internet connection.',
-                confirmButtonText: 'OK'
-            });
-        });
-    </script>
+</body>
+</html>
