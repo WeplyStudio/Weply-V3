@@ -25,28 +25,6 @@
     body {
        font-family: "Montserrat", sans-serif;
     }
-    .cursor-dot {
-    width: 5px;
-    height: 5px;
-    background-color: oklch(0.707 0.165 254.624);
-}
-
-.cursor-outline {
-    width: 30px;
-    height: 30px;
-    border: 2px solid oklch(0.707 0.165 254.624);
-}
-
-.cursor-dot,
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    pointer-events: none;
-}
   </style>
   <script>
   // Disable text selection
@@ -705,8 +683,6 @@
     <a href="#" class="block text-base font-semibold text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2">Log in <i class="fa fa-arrow-right fa-sm ml-3"></i></a>
   </div>
 </div>
-  <div class="cursor-dot" data-cursor-dot></div>
-<div class="cursor-outline" data-cursor-outline></div>
 </body>
 </html>
 <script src="https://kit.fontawesome.com/73e99931c3.js" crossorigin="anonymous"></script>
@@ -866,23 +842,4 @@ label.relative.inline-flex input[type="checkbox"]:checked ~ div:last-child {
                 confirmButtonText: 'OK'
             });
         });
-
-      const cursorDot = document.createElement('div');
-cursorDot.classList.add('cursor-dot');
-document.body.appendChild(cursorDot);
-
-const cursorOutline = document.createElement('div');
-cursorOutline.classList.add('cursor-outline');
-document.body.appendChild(cursorOutline);
-
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
-
-    cursorOutline.style.left = `${mouseX}px`;
-    cursorOutline.style.top = `${mouseY}px`;
-});
     </script>
