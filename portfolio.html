@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -37,19 +37,31 @@ button, a, input, select {
 img {
   pointer-events: none; /* Mencegah klik pada gambar */
 }
+@keyframes shake-diagonal {
+  0% { transform: translate(0, 0) rotate(0); }
+  20% { transform: translate(2px, -2px) rotate(1deg); }
+  40% { transform: translate(-2px, 2px) rotate(-1deg); }
+  60% { transform: translate(2px, -2px) rotate(1deg); }
+  80% { transform: translate(-2px, 2px) rotate(-1deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
+
+.shake-diagonal {
+  animation: shake-diagonal 0.6s ease-in-out;
+}
 </style>
 
 <body class="animate-on-scroll min-h-screen flex items-center justify-center px-4 bg-fixed bg-center bg-cover" style="background-image: url('https://i.pinimg.com/474x/c8/46/9a/c8469a79bcdd2343708becbecdf61c7b.jpg');">
   <div class="animate-on-scroll w-full max-w-md text-center space-y-8">
     <!-- Icon 3 titik di kanan atas -->
-    <div class="absolute top-5 right-5">
-      <button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+    <div class="absolute top-5 right-5 sm:top-5 sm:right-5">
+      <button id="iconToastTrigger">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path fill="currentColor" d="M12 8a2 2 0 1 0 0-4a2 2 0 0 0 0 4m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4m0 6a2 2 0 1 0 0 4a2 2 0 0 0 0-4"/>
         </svg>
       </button>
-    </div>
-
+    </div>    
+    
 <div class="animate-on-scroll mt-10 flex flex-col items-center space-y-2 relative z-0">
   <img src="https://weplystudio.my.id/profile.gif" class="w-32 rounded-full border-2 border-black shadow-md" alt="Profile" />
   
@@ -60,7 +72,6 @@ img {
 
   <p class="text-sm text-gray-500">Just a boy who loves the world of technology</p>
   
-  <!-- Section Sosmed di bawah Profile -->
 <div class="flex justify-center mt-6 space-x-4">
   <a href="https://instagram.com/jasonn.zip" target="_blank" class="group">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
@@ -98,7 +109,7 @@ img {
 </div>
 
 <div class="animate-on-scroll grid gap-4">
-  <a href="https://wa.me/6285868055463" class="animate-on-scroll group flex items-center justify-between w-full px-6 py-4 rounded-2xl border border-gray-300 bg-white hover:bg-black hover:text-white shadow-sm hover:shadow-xl transition duration-300">
+  <a href="https://wa.me/6285868055463" id="shakeButton" class="shake-diagonal group flex items-center justify-between w-full px-6 py-4 rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white shadow-sm hover:shadow-xl transition duration-300">
     <div class="animate-on-scroll flex items-center gap-3 text-sm font-medium">
       <i data-lucide="send" class="animate-on-scroll w-5 h-5 text-gray-500 group-hover:text-white animate-pulse"></i>
       <span class="animate-on-scroll tracking-wide">WhatsApp</span>
@@ -106,7 +117,7 @@ img {
     <i data-lucide="arrow-up-right" class="animate-on-scroll w-4 h-4 opacity-70 group-hover:translate-x-2 group-hover:rotate-180 transition-transform"></i>
   </a>
 
-  <a href="https://instagram.com/jassonn_17" class="animate-on-scroll group flex items-center justify-between w-full px-6 py-4 rounded-2xl border border-gray-300 bg-white hover:bg-gray-600 hover:text-white shadow-sm hover:shadow-xl transition duration-300">
+  <a href="https://instagram.com/jassonn_17" class="animate-on-scroll group flex items-center justify-between w-full px-6 py-4 rounded-full border border-gray-300 bg-white hover:bg-gray-600 hover:text-white shadow-sm hover:shadow-xl transition duration-300">
     <div class="animate-on-scroll flex items-center gap-3 text-sm font-medium">
       <i data-lucide="instagram" class="animate-on-scroll w-5 h-5 text-gray-500 group-hover:text-white animate-pulse"></i>
       <span class="animate-on-scroll tracking-wide">Instagram</span>
@@ -114,7 +125,7 @@ img {
     <i data-lucide="arrow-up-right" class="animate-on-scroll w-4 h-4 opacity-70 group-hover:translate-x-2 group-hover:rotate-180 transition-transform"></i>
   </a>
 
-  <a href="https://bitoai.my.id" class="animate-on-scroll group flex items-center justify-between w-full px-6 py-4 rounded-2xl border border-gray-300 bg-white hover:bg-gray-900 hover:text-white shadow-sm hover:shadow-xl transition duration-300">
+  <a href="https://bitoai.my.id" class="animate-on-scroll group flex items-center justify-between w-full px-6 py-4 rounded-full border border-gray-300 bg-white hover:bg-gray-900 hover:text-white shadow-sm hover:shadow-xl transition duration-300">
     <div class="animate-on-scroll flex items-center gap-3 text-sm font-medium">
       <i data-lucide="cpu" class="animate-on-scroll w-5 h-5 text-gray-700 group-hover:text-white animate-pulse"></i>
       <span class="animate-on-scroll tracking-wide">Bito AI</span>
@@ -122,7 +133,7 @@ img {
     <i data-lucide="arrow-up-right" class="animate-on-scroll w-4 h-4 opacity-70 group-hover:translate-x-2 group-hover:rotate-180 transition-transform"></i>
   </a>
 
-  <a href="mailto:matchboxdevelopment@gmail.com" class="animate-on-scroll group flex items-center justify-between w-full px-6 py-4 rounded-2xl border border-gray-300 bg-white hover:bg-gray-600 hover:text-white shadow-sm hover:shadow-xl transition duration-300">
+  <a href="mailto:matchboxdevelopment@gmail.com" class="animate-on-scroll group flex items-center justify-between w-full px-6 py-4 rounded-full border border-gray-300 bg-white hover:bg-gray-600 hover:text-white shadow-sm hover:shadow-xl transition duration-300">
     <div class="animate-on-scroll flex items-center gap-3 text-sm font-medium">
       <i data-lucide="mail" class="animate-on-scroll w-5 h-5 text-gray-500 group-hover:text-white animate-pulse"></i>
       <span class="animate-on-scroll tracking-wide">Email Me</span>
@@ -157,7 +168,7 @@ img {
 <section id="services" class="bg-white w-full px-6 md:px-10 py-20 max-w-7xl mx-auto border border-gray-200 rounded-3xl">
   <div class="mb-14 text-center">
     <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 flex items-center justify-center gap-4">
-      <i data-lucide="layers" class="text-gray-600 animate-pulse"></i> Layanan Kami
+      <i data-lucide="layers" class="text-gray-600 animate-pulse"></i> Layanan Saya
     </h2>
     <p class="text-lg text-gray-500 max-w-3xl mx-auto">
       Inilah layanan-layanan terbaik yang gue tawarin buat bantu lo tampil makin keren di dunia digital.
@@ -372,14 +383,6 @@ img {
         <span class="text-sm text-white">NextJs</span>
       </div>
 
-      <!-- Skill Card: Flutter -->
-      <div class="bg-transparent p-6 hover:text-gray-600 transition-all duration-300 flex flex-col items-center">
-        <div class="text-4xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#fff" d="M5.9 15.375L2.5 12l11-11h6.775zM13.5 23l-5.925-5.925L13.5 11.15h6.775l-5.925 5.925L20.275 23z"/></svg>
-        </div>
-        <span class="text-sm text-white">Flutter</span>
-      </div>
-
       <!-- Skill Card: Java -->
       <div class="bg-transparent p-6 hover:text-gray-600 transition-all duration-300 flex flex-col items-center">
         <div class="text-4xl mb-4">
@@ -426,14 +429,6 @@ img {
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#fff" d="M20.493 6.725c.256-.334.652-.53 1.073-.53h.34l-4.392 5.743L22 17.803h-.34a1.35 1.35 0 0 1-1.073-.53l-3.576-4.676l-3.577 4.676a1.35 1.35 0 0 1-1.072.53h-.34l4.485-5.865l-4.391-5.743h.34c.42 0 .817.196 1.072.53l3.482 4.554z"/><path fill="#fff" fill-rule="evenodd" d="M5.563 17.146c1.924.702 3.936-.094 4.959-1.647c.2-.305.53-.498.896-.498h.255c-.94 2.437-3.72 3.856-6.363 2.905C3.287 17.178 2 15.179 2 13.029V10.8a5.01 5.01 0 0 1 5.486-4.981c2.593.243 4.521 2.523 4.521 5.127V12.6H2.801v.444c0 1.802 1.069 3.485 2.762 4.102m1.44-10.55a4.21 4.21 0 0 0-4.202 4.202V11.8h8.406v-1a4.21 4.21 0 0 0-4.203-4.204" clip-rule="evenodd"/></svg>
         </div>
         <span class="text-sm text-white">Express</span>
-      </div>
-      
-      <!-- Skill Card: Angular -->
-      <div class="bg-transparent p-6 hover:text-gray-600 transition-all duration-300 flex flex-col items-center">
-        <div class="text-4xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2m0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 0 1-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.96 7.96 0 0 0 12 4m-8 8a8 8 0 0 0 8 8c.04 0 .09 0-8-8"/></svg>
-        </div>
-        <span class="text-sm text-white">Gatsby</span>
       </div>
       
     </div>
@@ -641,7 +636,7 @@ img {
   <div class="animate-on-scroll max-w-md mx-auto pt-4 space-y-4">
 
     <!-- Logo / Username -->
-    <h2 class="text-lg font-bold tracking-widest text-gray-500 mb-8">@Jasson17</h2>
+    <h2 class="text-lg font-bold tracking-widest text-gray-500 mb-24">@Jasson17</h2>
   </div>
 </footer>
 
@@ -686,7 +681,7 @@ img {
       // Jika Ctrl + U ditekan
       if (e.ctrlKey && e.key.toLowerCase() === 'u') {
         e.preventDefault(); // Blokir aksinya
-        alert("Dilarang melihat source code!");
+        alert("Akses Ditolak!");
       }
     });
 
@@ -716,11 +711,82 @@ img {
     });
   }
 
-  const tahunLahir = 2010; // Ganti dengan tahun lahirmu
+  const tahunLahir = 2010;
     const tahunSekarang = new Date().getFullYear();
     const umur = tahunSekarang - tahunLahir;
 
     document.getElementById('umur').innerText = `${umur} Tahun`;
 </script>
+<script>
+  const button = document.getElementById('shakeButton');
+  setInterval(() => {
+    if (!button.matches(':hover')) {
+      button.classList.add('shake-diagonal');
+      setTimeout(() => button.classList.remove('shake-diagonal'), 600);
+    }
+  }, 3000);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-start",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+
+  let clickCount = 0;
+  let firstClickTime = null;
+  const spamThreshold = 5;
+  const spamTimeLimit = 10000;
+
+  const iconButton = document.getElementById("iconToastTrigger");
+
+  document.getElementById("iconToastTrigger").addEventListener("click", () => {
+    const currentTime = new Date().getTime();
+
+    if (firstClickTime === null) {
+      firstClickTime = currentTime;
+    }
+
+    const timeDiff = currentTime - firstClickTime;
+
+    if (timeDiff <= spamTimeLimit) {
+      clickCount++;
+    } else {
+
+      clickCount = 1;
+      firstClickTime = currentTime;
+    }
+
+    if (clickCount >= spamThreshold) {
+      Toast.fire({
+        icon: 'warning',
+        title: 'Jangan spam kocak!',
+      });
+
+      iconButton.disabled = true;
+
+      setTimeout(() => {
+        iconButton.disabled = false;
+      }, 3000);
+
+      clickCount = 0;
+      firstClickTime = null;
+    } else {
+      Toast.fire({
+        icon: 'success',
+        title: 'Gak ada apa-apa sehh',
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
